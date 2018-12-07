@@ -1,0 +1,43 @@
+<!-- Model Content -->
+<div class="Modal_Content">
+   <!-- Model Header -->
+   <div class="Modal_Header">
+      <p>Apply Job Now</p>
+      <span data-dismiss="modal" (click)="bsModalRef.hide()">&times;</span>
+   </div>
+   <!-- Model Body -->
+   <div class="Model_Body">
+      <div class="Content">
+         <p>Attach File With CV & Apply By Jobby Profile</p>
+      </div><br>
+      <div class="form_details">
+         <form>
+            <div class="row">
+               <div class="col-sm-6">
+                  <input type="text" placeholder="Full Name"><br><br>
+               </div>
+               <div class="col-sm-6">
+                  <input type="text" placeholder="Email Address"><br><br>
+               </div>
+               <div class="col-sm-6">
+                  <input type="text" placeholder="Phone No"><br><br>
+               </div>
+               <div class="col-sm-6">
+                  <input type="text" placeholder="Experience"><br><br>
+               </div>
+            </div>
+         </form>
+         <div class="file_section">
+            <button class="select_file">SELECT FILE</button>
+            <P>Upload Your CV/resume file Max file size:3MB</P>
+         </div>
+         <div class="Apply_By">
+            <p><span><i class="material-icons">check</i></span> Apply By Jobby Profile</p>
+         </div>
+         <div class="buttons">
+            <button mat-raised-button color="primary"> APPLY NOW </button>
+            <button class="cancel">CANCEL</button>
+         </div>
+      </div>
+   </div>
+</div>

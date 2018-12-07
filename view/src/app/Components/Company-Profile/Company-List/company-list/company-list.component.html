@@ -1,0 +1,315 @@
+<app-header></app-header>
+<div class="header_two">
+   <span style="margin-left: 6%;font-size: 20px;font-weight: 600;">Jobby</span>
+   <ul class="Menu1">
+      <a [routerLink]="['/landing_page']" ><li class="Menu_List1 ">Home</li></a>
+      <a [routerLink]="['/Job_Search']" ><li class="Menu_List1">Find Jobs</li></a>
+      <!-- <li class="Menu_List1">Find Work</li> -->
+      <a [routerLink]="['/Company_Profile']"><li class="Menu_List1 ">Find Companies</li></a>
+      <!-- <li class="Menu_List1">Find FreeLancers</li>
+      <li class="Menu_List1">pages</li> -->
+      <span class="search"><i class="material-icons">search</i></span>
+      <!-- <button mat-raised-button color="warn">Warn</button> -->
+      <!-- <a [routerLink]="['/registration']"  ><span class="post"><button>JOB SEEKER</button></span></a>
+      <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a> -->
+   </ul>
+</div>
+<div class="header_three">
+   <div class="left_content">
+      <p>Browser Companies List</p>
+   </div>
+   <div class="right_content">
+      <p><a [routerLink]="['/landing_page']"><span>Home</span></a>/Browser Companies List</p>
+   </div>
+</div><br><br>
+<div class="Filters">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-4 filters">
+            <div class="header">
+               <p>Filters <span>Clear All Filters</span></p>
+            </div>
+            <div class="skills">
+               <p>Skills <span>Clear</span></p>
+               <input type="text" placeholder="Keywords"><br><br>
+               <div class="buttons">
+                  <button class="ux"><span>UX</span></button>
+                  <button class="ui"><span>UI</span></button>
+                  <button class="photoshop"><span>Wordpress</span></button>
+                  <button class="photoshop"><span>PHP</span></button><br><br>
+                  <button class="photoshop"><span>Html</span></button>
+                  <button class="photoshop"><span>Opencart</span></button>
+                  <button class="photoshop"><span>Photoshop</span></button>
+               </div>
+            </div>
+            <div class="Category">   
+               <p>Category <span>Clear</span></p>
+               <div class="category">
+                  <select>
+                     <option>All Category</option>
+                     <option>Category</option>
+                     <option>Category</option>
+                  </select>
+               </div>
+            </div>
+            <div class="Series">
+               <p>Series(A to Z) <span>Clear</span></p>
+               <div class="series">
+                  <select>
+                     <option>Select Alphabet</option>
+                     <option>Level</option>
+                     <option>Level</option>
+                  </select>
+               </div>
+            </div>
+            <div class="Location">
+               <p>Location <span>Clear</span></p>
+               <div class="location">
+                 <input type="text" placeholder="Enter State Or Country">
+               </div><br>
+               <div class="Search_Now">
+                  <button class="search_now">SEARCH NOW</button>
+               </div><br><br>
+            </div>
+         </div>
+         <div class="col-sm-8 Jobs">
+            <div class="Main_Header">
+               <div class="image_section">
+                  <img src="../../../../assets/Images/job-search.png">
+               </div>
+               <div class="content_section">
+                  <p class="upgrade">Upgrade to Pro</p>
+                  <p class="unlimited_jobs">Unlimited Job Posts and Apply</p>
+               </div>
+               <div class="button_section">
+                  <button class="upgrade_plan">Upgrade Plan</button>
+               </div>
+            </div><br><br>
+            <div class="main_header">
+               <ul class="Tabs">
+                  <li style="font-size: 14px;font-weight: 500;color: #383636;margin-top: 10px;"><span>Search Results</span></li>
+                 <li style="margin-left: 293px; margin-right: 10px"><span style=" font-size: 14px;font-weight: 500;color: #292727;">Sort by: </span>
+                     <span>
+                        <select>
+                           <option>Relevance</option>
+                           <option>less than 1 year</option>
+                           <option>above 4 yrs</option>
+                        </select>
+                     </span>
+                  </li>
+                  <li style="margin-left: 15px;margin-right: 10px"><span><i class="material-icons grid">grid_on</i></span></li>
+                  <li style="margin-right: 10px"><span><i class="material-icons menu"> menu</i></span></li>
+               </ul>
+            </div><br><br>
+            <div class="Company">
+               <div class="Company_Section">
+                  <div class="Image_Section">
+                     <img src="../../../../../assets/Images/company.png">
+                  </div>
+                  <div class="Name_Section">
+                     <p class="Name">Gambol Themes</p>
+                     <p class="Website">www.gambolthemes.net</p>
+                  </div>
+                  <div class="Rating_Section">
+                     <p class="rating">Rating</p>
+                     <p>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star_half</i></span>
+                     </p>
+                  </div>
+                  <div class="location_section">
+                     <p class="location">Location</p>
+                     <p style="margin-bottom: 3px;font-size: 16px;font-weight: 600;color: #bfbbbb;"><span><i class="material-icons loca">location_on</i></span>Australia</p>
+                  </div>
+               </div>
+               <div class="job_footer">
+                  <div class="row" style="border-top: 1px solid #ddd;">
+                     <div class="col-sm-10 button">
+                        <a [routerLink]="['/Company_Profile']"><P>VIEW COMPANY PROFILE</P></a>
+                     </div> 
+                     <div class="col-sm-2 ">
+                        <!-- <button mat-mini-fab>
+                           <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                        </button> -->
+                    </div>
+                  </div>
+               </div> 
+            </div><br><br>
+            <div class="Company">
+               <div class="Company_Section">
+                  <div class="Image_Section">
+                     <img src="../../../../../assets/Images/company.png">
+                  </div>
+                  <div class="Name_Section">
+                     <p class="Name">Gambol Themes</p>
+                     <p class="Website">www.gambolthemes.net</p>
+                  </div>
+                  <div class="Rating_Section">
+                     <p class="rating">Rating</p>
+                     <p>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star_half</i></span>
+                     </p>
+                  </div>
+                  <div class="location_section">
+                     <p class="location">Location</p>
+                     <p style="margin-bottom: 3px;font-size: 16px;font-weight: 600;color: #bfbbbb;"><span><i class="material-icons loca">location_on</i></span>Australia</p>
+                  </div>
+               </div>
+               <div class="job_footer">
+                  <div class="row" style="border-top: 1px solid #ddd;">
+                     <div class="col-sm-10 button">
+                        <a [routerLink]="['/Company_Profile']"><P>VIEW COMPANY PROFILE</P></a>
+                     </div> 
+                     <div class="col-sm-2 ">
+                        <!-- <button mat-mini-fab>
+                           <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                        </button> -->
+                    </div>
+                  </div>
+               </div> 
+            </div><br><br>
+            <div class="Company">
+               <div class="Company_Section">
+                  <div class="Image_Section">
+                     <img src="../../../../../assets/Images/company.png">
+                  </div>
+                  <div class="Name_Section">
+                     <p class="Name">Gambol Themes</p>
+                     <p class="Website">www.gambolthemes.net</p>
+                  </div>
+                  <div class="Rating_Section">
+                     <p class="rating">Rating</p>
+                     <p>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star_half</i></span>
+                     </p>
+                  </div>
+                  <div class="location_section">
+                     <p class="location">Location</p>
+                     <p style="margin-bottom: 3px;font-size: 16px;font-weight: 600;color: #bfbbbb;"><span><i class="material-icons loca">location_on</i></span>Australia</p>
+                  </div>
+               </div>
+               <div class="job_footer">
+                  <div class="row" style="border-top: 1px solid #ddd;">
+                     <div class="col-sm-10 button">
+                        <a [routerLink]="['/Company_Profile']"><P>VIEW COMPANY PROFILE</P></a>
+                     </div> 
+                     <div class="col-sm-2 ">
+                        <!-- <button mat-mini-fab>
+                           <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                        </button> -->
+                    </div>
+                  </div>
+               </div> 
+            </div><br><br>
+            <div class="Company">
+               <div class="Company_Section">
+                  <div class="Image_Section">
+                     <img src="../../../../../assets/Images/company.png">
+                  </div>
+                  <div class="Name_Section">
+                     <p class="Name">Gambol Themes</p>
+                     <p class="Website">www.gambolthemes.net</p>
+                  </div>
+                  <div class="Rating_Section">
+                     <p class="rating">Rating</p>
+                     <p>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star_half</i></span>
+                     </p>
+                  </div>
+                  <div class="location_section">
+                     <p class="location">Location</p>
+                     <p style="margin-bottom: 3px;font-size: 16px;font-weight: 600;color: #bfbbbb;"><span><i class="material-icons loca">location_on</i></span>Australia</p>
+                  </div>
+               </div>
+               <div class="job_footer">
+                  <div class="row" style="border-top: 1px solid #ddd;">
+                     <div class="col-sm-10 button">
+                        <a [routerLink]="['/Company_Profile']"><P>VIEW COMPANY PROFILE</P></a>
+                     </div> 
+                     <div class="col-sm-2 ">
+                        <!-- <button mat-mini-fab>
+                           <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                        </button> -->
+                    </div>
+                  </div>
+               </div> 
+            </div>
+         </div>
+      </div>
+   </div>
+</div><br><br><br>
+<div class="footer">
+   <div class="email_section">
+      <div class="news">
+         <p class="news_heading">Subscribe To News Letter</p>
+         <p class="news_content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="email">
+         <input type="text" placeholder="Your Email Address">
+         <span><button>Subscribe</button></span>
+      </div>
+   </div>
+   <div class="link_section">
+      <span class="company">
+         <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </span>
+      <span class="about">
+         <ul>
+            <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>
+            <li>Login</li>
+            <li>My Account</li>
+            <li>Contact</li>
+            <li>Privacy Policy</li>
+            <li>Terms Of Use</li>
+         </ul>
+      </span>
+      <span class="for_companies">
+         <ul>
+            <li style="color:#fff;font-size:16px;font-weight:500;">For Companies</li><br>
+            <li>Browse Freelancers</li>
+            <li>Post a Job</li>
+            <li>Post a Project</li>
+            <li>Pricing Plans</li>
+         </ul>
+      </span>
+      <span class="for_candidates">
+         <ul>
+            <li style="color:#fff;font-size:16px;font-weight:500;">For Candidates</li><br>
+            <li>Browse Jobs</li>
+            <li>Jobs Alerts</li>
+            <li>Applied Jobs</li>
+            <li>Bookmarks</li>
+         </ul>
+      </span>
+   </div>
+   <div class="copyright_section">
+      <div class="copyright">
+         <p>@ copyright 2018 Jobby by aashi.All Rights Reserved.</p>
+      </div>
+      <div class="links">
+         <ul>
+            <li>EN</li>
+            <li><i class="fab fa-facebook-f"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-google-plus-g"></i></li>
+            <li><i class="fab fa-linkedin-in"></i></li>
+         </ul>
+      </div>
+   </div>
+</div>

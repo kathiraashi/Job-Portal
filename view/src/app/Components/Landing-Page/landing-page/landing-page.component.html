@@ -1,0 +1,266 @@
+<app-header></app-header>
+<!-- Header Two -->
+<div class="header_two">
+   <span style="margin-left: 6%;font-size: 20px;font-weight: 600;">Jobby</span>
+   <ul class="Menu1">
+      <a [routerLink]="['/landing_page']"  [routerLinkActive]="'active'" ><li class="Menu_List1 ">Home</li></a>
+      <a [routerLink]="['/Job_Search']" [routerLinkActive]="'active'" ><li class="Menu_List1 ">Find Jobs</li></a>
+      <!-- <li class="Menu_List1">Find Work</li> -->
+      <a [routerLink]="['/Company_List']"><li class="Menu_List1 " [routerLinkActive]="'active'" >Find Companies</li></a>
+      <!-- <li class="Menu_List1">Find FreeLancers</li>
+      <li class="Menu_List1">pages</li> -->
+      <span class="search"><i class="material-icons">search</i></span>
+      <!-- <button mat-raised-button color="warn">Warn</button> -->
+      <a [routerLink]="['/registration']"  ><span class="post"><button>JOB SEEKER</button></span></a>
+      <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a>
+   </ul>
+</div>
+<!-- Header Three -->
+<div class="header_three">
+   <ul class="Menu2">
+      <li class="Menu_List2"><input type="text" placeholder="keywords(eg.Job Title,Position...)" style="outline: none; background-color: #fff;border: 1px solid #fff;padding: 7px 10px;width: 290px;height: 40px; border-radius: 3px;margin-top: 7px;"></li>
+      <li class="Menu_List2"><input type="text" placeholder="Locatio(eg.City,Country...)"></li>
+      <li class="Menu_List2"><input type="text" placeholder="Industry(eg.Design,Art......)"></li>
+      <span class="Menu_List"><input type="text" placeholder="SEARCH NOW" style="outline:none;background-color: #ff4406;border: 2px solid #fff;padding: 0px 10px;width: 180px;height: 40px;border-radius: 3px;color: #fff;margin-top:7px;"></span>
+   </ul>
+</div>
+<div class="image_section">
+   <img src="../../../../assets/Images/career.jpg">
+</div>
+<div class="header_four">
+   <ul class="Menu3">
+      <li class="Menu_List3">3M Registered Members</li>
+      <li class="Menu_List3">786k Job Found</li>
+      <li class="Menu_List3">1.2k Best Companies</li>
+      <!-- <button mat-raised-button color="warn">Warn</button> -->
+      <span class="post"><a [routerLink]="['/Job_View']" ><button>POST A JOB</button></a></span>
+      <span class="task"><button>POST A TASK</button></span>
+   </ul>
+</div><br>
+<div class="content_section">
+   <div class="container">
+      <p style="text-align: center;font-size: 22px;font-weight: 600;margin-bottom:0px;color:#000">What We Offer</p>
+      <p style="text-align: center;font-size: 12px;font-weight: 600;color: #3c3939;">Offering the Best Deal</p>
+      <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:47%"></div><br>
+      <div class="row">
+         <div class="col-sm-3 content">
+            <h4>Searching the Best Job</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h5>Read More  >></h5>
+         </div>
+         <div class="col-sm-3 content">
+            <h4>Searching the Best Job</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h5>Read More  >></h5>
+         </div>
+         <div class="col-sm-3 content">
+            <h4>Searching the Best Job</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h5>Read More  >></h5>
+         </div>
+         <div class="col-sm-3 content">
+            <h4>Searching the Best Job</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h5>Read More  >></h5>
+         </div>
+      </div>
+   </div>
+</div><br>
+<div class="job_section">
+   <div class="container">
+      <p style="text-align: center;font-size: 22px;font-weight: 600;margin-bottom:0px;">Find Latest Jobs</p>
+      <p style="text-align: center;font-size: 12px;font-weight: 600;color: #3c3939;">Your Job For a Future</p>
+      <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:47%"></div><br>
+      <div class="row">
+         <div class="col-sm-4 job">
+                  <div class="header">
+                     <span class="img_section">
+                        <img src="../../../../assets/Images/employee.jpg">
+                     </span>
+                     <span class="name_section">
+                        <p class="name">John Doe </p>
+                        <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
+                     </span>
+                     <span class="price_section">
+                        <p class="Price">$599</p>
+                        <p><button class="button">Full Time</button></p>
+                     </span>
+                  </div><br>
+                  <div class="content_section">
+                     <h4>UX Designer</h4>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div><br>
+                  <div class="button_section">
+                     <!-- <button mat-raised-button color="primary">Primary</button>
+                     <button mat-raised-button color="primary">Primary</button>
+                     <button mat-raised-button color="primary">Primary</button>
+                     <button mat-raised-button color="primary">Primary</button> -->
+                     <button class="ux"><span>UX</span></button>
+                     <button class="ui"><span>UI</span></button>
+                     <button class="photoshop"><span>Photoshop</span></button>
+                     <button class="view"><span>+4</span></button>
+                  </div><br>
+                  <div class="job_footer">
+                     <div class="row" style="border-top: 1px solid #ddd;">
+                        <div class="col-sm-5 button">
+                           <p (click)="JobApply()">APPLY NOW</p>
+                           </div>
+                           <div class="col-sm-5 button">
+                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
+                           </div> 
+                           <div class="col-sm-2 ">
+                              <!-- <button mat-mini-fab>
+                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                              </button> -->
+                           </div>
+                        </div>
+                     </div>
+         </div>
+         <div class="col-sm-4 job">
+            <div class="header">
+                  <span class="img_section">
+                     <img src="../../../../assets/Images/employee.jpg">
+                  </span>
+                  <span class="name_section">
+                     <p class="name">John Doe </p>
+                     <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
+                  </span>
+                  <span class="price_section">
+                     <p class="Price">$599</p>
+                     <p><button class="button">Full Time</button></p>
+                  </span>
+            </div><br>
+            <div class="content_section">
+               <h4>UX Designer</h4>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div><br>
+            <div class="button_section">
+               <!-- <button mat-raised-button color="primary">Primary</button>
+               <button mat-raised-button color="primary">Primary</button>
+               <button mat-raised-button color="primary">Primary</button>
+               <button mat-raised-button color="primary">Primary</button> -->
+               <button class="ux"><span>UX</span></button>
+               <button class="ui"><span>UI</span></button>
+               <button class="photoshop"><span>Photoshop</span></button>
+               <button class="view"><span>+4</span></button>
+            </div><br>
+            <div class="job_footer">
+               <div class="row" style="border-top: 1px solid #ddd;">
+                  <div class="col-sm-5 button">
+                     <p (click)="JobApply()">APPLY NOW</p>
+                     </div>
+                     <div class="col-sm-5 button">
+                        <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
+                     </div> 
+                     <div class="col-sm-2 ">
+                     </div>
+                  </div>
+               </div>
+         </div>
+         <div class="col-sm-4 job">
+            <div class="header">
+               <span class="img_section">
+                  <img src="../../../../assets/Images/employee.jpg">
+               </span>
+               <span class="name_section">
+                  <p class="name">John Doe </p>
+                  <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
+               </span>
+               <span class="price_section">
+                  <p class="Price">$599</p>
+                  <p><button class="button">Full Time</button></p>
+               </span>
+            </div><br>
+            <div class="content_section">
+               <h4>UX Designer</h4>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div><br>
+            <div class="button_section">
+               <!-- <button mat-raised-button color="primary">Primary</button>
+               <button mat-raised-button color="primary">Primary</button>
+               <button mat-raised-button color="primary">Primary</button>
+               <button mat-raised-button color="primary">Primary</button> -->
+               <button class="ux"><span>UX</span></button>
+               <button class="ui"><span>UI</span></button>
+               <button class="photoshop"><span>Photoshop</span></button>
+               <button class="view"><span>+4</span></button>
+            </div><br>
+            <div class="job_footer">
+               <div class="row" style="border-top: 1px solid #ddd;">
+                  <div class="col-sm-5 button">
+                     <p (click)="JobApply()">APPLY NOW</p>
+                  </div>
+                  <div class="col-sm-5 button">
+                     <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
+                  </div> 
+                  <div class="col-sm-2 ">
+                     <!-- <button mat-mini-fab>
+                        <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                     </button> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div><br><br>
+<div class="footer">
+   <div class="email_section">
+      <div class="news">
+         <p class="news_heading">Subscribe To News Letter</p>
+         <p class="news_content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="email">
+         <input type="text" placeholder="Your Email Address">
+         <span><button>Subscribe</button></span>
+      </div>
+   </div>
+   <div class="link_section">
+      <span class="company">
+         <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </span>
+      <span class="about">
+         <ul>
+            <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>
+            <li>Login</li>
+            <li>My Account</li>
+            <li>Contact</li>
+            <li>Privacy Policy</li>
+            <li>Terms Of Use</li>
+         </ul>
+      </span>
+      <span class="for_companies">
+         <ul>
+            <li style="color:#fff;font-size:16px;font-weight:500;">For Companies</li><br>
+            <li>Browse Freelancers</li>
+            <li>Post a Job</li>
+            <li>Post a Project</li>
+            <li>Pricing Plans</li>
+         </ul>
+      </span>
+      <span class="for_candidates">
+         <ul>
+            <li style="color:#fff;font-size:16px;font-weight:500;">For Candidates</li><br>
+            <li>Browse Jobs</li>
+            <li>Jobs Alerts</li>
+            <li>Applied Jobs</li>
+            <li>Bookmarks</li>
+         </ul>
+      </span>
+   </div>
+   <div class="copyright_section">
+      <div class="copyright">
+         <p>@ copyright 2018 Jobby by aashi.All Rights Reserved.</p>
+      </div>
+      <div class="links">
+         <ul>
+            <li>EN</li>
+            <li><i class="fab fa-facebook-f"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-google-plus-g"></i></li>
+            <li><i class="fab fa-linkedin-in"></i></li>
+         </ul>
+      </div>
+   </div>
+</div>

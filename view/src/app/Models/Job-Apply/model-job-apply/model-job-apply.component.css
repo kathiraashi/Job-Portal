@@ -1,0 +1,107 @@
+/* Model Content */
+.Modal_Content {
+   width: 100%;
+   height: 100%;
+   padding: 0px 10px;
+}
+/* Model Header */
+.Modal_Header {
+   position: relative;
+   display: flex;
+   align-items: center;
+   height: 45px;
+   border-bottom: 1px solid #e8e8e8;
+}
+.Modal_Header p {
+   margin: 0px;
+   font-weight: 700;
+   font-size: 15px;
+   color: #1f1d1d;
+   letter-spacing: 0.3px;
+   width: 100%;
+   text-align: center;
+}
+.Modal_Header span {
+   font-size: 30px;
+   position: absolute;
+   right: 0px;
+   font-weight: 900;
+   top: -4px;
+   cursor: pointer;
+}
+/* Model Body */
+.Model_Body {
+   padding: 20px;
+}
+.Model_Body .Content p{
+   text-align: center;
+   font-size: 17px;
+   font-weight: 500;
+   color: #464444;
+}
+.Model_Body .form_details form input{
+   width: 100%;
+   height: 35px;
+   border: 1px solid #ececec;
+   border-radius: 3px;
+   outline: none;
+   padding: 7px 5px;
+}
+.Model_Body .form_details form input::placeholder{
+   font-size:13px;
+   font-weight:500;
+   color:rgb(197, 188, 188);
+}
+.file_section{
+   border: 1px solid #efefef;
+}
+.file_section .select_file{
+   background-color: #FF4500;
+   border: 1px solid #ff4500;
+   padding: 9px 30px;
+   border-radius: 2px;
+   font-size: 11px;
+   font-weight: 700;
+   color: #fff;
+   outline: none;
+   margin-left: 170px;
+   margin-top: 25px;
+}
+.file_section p{
+   font-size: 11px;
+   font-weight: 500;
+   color: #8c8383;
+   margin-left: 117px;
+   margin-top: 5px;
+}
+.Apply_By{
+   margin-top:10px;
+}
+.Apply_By p{
+   font-size: 13px;
+   font-weight: 500;
+   color: #313131;
+}
+.Apply_By span{
+   padding: 5px 5px;
+}
+.Apply_By span i{
+   font-size: 12px;
+   font-weight: 500;
+   background-color: #ff4500;
+   border-radius: 50px;
+   color: #fff;
+}
+.cancel{
+   background-color: #EFEFEF;
+   border: 1px solid #EFEFEF;
+   padding: 6px 28px;
+   border-radius: 2px;
+   font-family: Roboto,"Helvetica Neue",sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   color: #928989;
+   outline: none;
+   margin-left: 16px;
+   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}

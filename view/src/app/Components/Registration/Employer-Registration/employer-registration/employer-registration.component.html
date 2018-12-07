@@ -1,0 +1,190 @@
+<app-header></app-header>
+<!-- Header Two -->
+<div class="header_two">
+   <span style="margin-left: 6%;font-size: 20px;font-weight: 600;">Jobby</span>
+   <ul class="Menu1">
+      <a [routerLink]="['/landing_page']" ><li class="Menu_List1 ">Home</li></a>
+      <a [routerLink]="['/Job_Search']"><li class="Menu_List1">Find Jobs</li></a>
+      <!-- <li class="Menu_List1">Find Work</li> -->
+      <a [routerLink]="['/Company_Profile']"><li class="Menu_List1 ">Find Companies</li></a>
+      <!-- <li class="Menu_List1">Find FreeLancers</li>
+      <li class="Menu_List1">pages</li> -->
+      <span class="search"><i class="material-icons">search</i></span>
+      <!-- <button mat-raised-button color="warn">Warn</button> -->
+      <a [routerLink]="['/registration']"  ><span class="post"><button>JOB SEEKER</button></span></a>
+      <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a>
+   </ul>
+</div>
+<div class="header_three">
+   <div class="left_content">
+      <p>Create Employer Profile</p>
+   </div>
+   <div class="right_content">
+      <p><a [routerLink]="['/landing_page']"><span>Home</span></a>/Create Employer Profile</p>
+   </div>
+</div><br><br>
+<div class="Registration_Details">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-8 Profile_details">
+            <h4>Create Employer Profile</h4>
+            <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:3%"></div><br><br>
+            <!-- <p>Profile</p>
+            <img src="../../../../assets/Images/profile.png"><br><br>
+            <div>
+               <button class="upload_button">Upload Profile</button>
+            </div><br> -->
+            <div class="form_details">
+               <form>
+                  <div class="row">
+                     <div class="col-sm-6">
+                        <label>Email Id</label><br>
+                        <input type="text" placeholder="Enter Your Email Id">
+                     </div>
+                     <div class="col-sm-6">
+                        <label>Password</label><br>
+                        <input type="text" placeholder="Enter Your Password"><br>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-6">
+                        <label>Confirm Password</label><br>
+                        <input type="text" placeholder="Enter Your Confirm Password"><br>
+                     </div>
+                     <div class="col-sm-6">
+                        <label>Company Name</label><br>
+                        <input type="text" placeholder="Enter Your Comapany Name"><br>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-6">
+                        <label>Industry Type </label><br>
+                        <select>
+                           <option>Select an Industry Type</option>
+                           <option>Company</option>
+                           <option>Consultant</option>
+                        </select>
+                     </div>
+                     <div class="col-sm-6">
+                        <label>Contact Person Name</label><br>
+                        <input type="text" placeholder="Enter Contact Person Name"><br>
+                     </div>
+                     <div class="col-sm-6">
+                        <label>Designation</label><br>
+                        <input type="text" placeholder="Enter Your Designation"><br>
+                     </div>
+                     <div class="col-sm-6">
+                        <label>Landline</label><br>
+                        <input type="text" placeholder="Enter Your Landline"><br>
+                     </div>
+                     <div class="col-sm-6">
+                        <label>Mobile No</label><br>
+                        <input type="text" placeholder="Enter Your MobileNo"><br>
+                     </div>
+                     <div class="col-sm-6">
+                        <label>Alternate Email</label><br>
+                        <input type="text" placeholder="Enter Your Alternate Email"><br>
+                     </div>
+                     <div class="col-sm-6">
+                        <label>Alternate Contact No</label><br>
+                        <input type="text" placeholder="Enter Your Contact No"><br>
+                     </div>
+                  </div>
+                  <div class="col-sm-12 Experience">
+                     <span style="font-size: 15px;font-weight: 600;color: #4a4747;margin-left: -15px;">GST Registered</span>  
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                     </label>
+                  </div><br>
+                  <div class="row">
+                     <div class="col-sm-6">
+                        <label>GSTN</label><br>
+                        <input type="text" placeholder="GSTN"><br>
+                     </div>
+                  </div><br>
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <input type="checkbox" class="terms_conditions">Agree Terms & Conditions <br>
+                        <input type="checkbox" class="terms_conditions">Subscribe to Receive Promotion to my email id <br>
+                     </div>
+                  </div>
+               </form>
+            </div><br>
+            <div class="Registration_Button">
+               <a [routerLink]="['/Company_Profile']" ><button class="registration_button">REGISTER</button></a><span style="font-size: 15px;font-weight: 600;color: #716f6e;margin-left: 15px;">Already Registered?</span><a [routerLink]="['/Employer_sign_In']"><span class="sign_in">sign in</span></a>
+            </div><br><br>
+         </div>
+         <!-- <div class="col-sm-4 FAQ">
+            <h4>FAQ</h4><br>
+            <P CLASS="Que">01.Lorem ipsum dolor sit amet consectetur adipisicing elit?</P>
+            <p class="Ans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea quaerat expedita nemo fugit? Adipisci fuga, soluta eveniet debitis rerum atque facere, maiores numquam quidem eius quae vel provident? Porro.</p><br>
+            <P CLASS="Que">02.Lorem ipsum dolor sit amet consectetur adipisicing elit?</P>
+            <p class="Ans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea quaerat expedita nemo fugit? Adipisci fuga, soluta eveniet debitis rerum atque facere, maiores numquam quidem eius quae vel provident? Porro.</p><br>
+         </div> -->
+      </div>
+   </div>
+</div>
+<div class="footer">
+   <div class="email_section">
+      <div class="news">
+         <p class="news_heading">Subscribe To News Letter</p>
+         <p class="news_content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="email">
+         <input type="text" placeholder="Your Email Address">
+         <span><button>Subscribe</button></span>
+      </div>
+   </div>
+   <div class="link_section">
+      <span class="company">
+         <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </span>
+      <span class="about">
+         <ul>
+            <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>
+            <li>Login</li>
+            <li>My Account</li>
+            <li>Contact</li>
+            <li>Privacy Policy</li>
+            <li>Terms Of Use</li>
+         </ul>
+      </span>
+      <span class="for_companies">
+         <ul>
+            <li style="color:#fff;font-size:16px;font-weight:500;">For Companies</li><br>
+            <li>Browse Freelancers</li>
+            <li>Post a Job</li>
+            <li>Post a Project</li>
+            <li>Pricing Plans</li>
+         </ul>
+      </span>
+      <span class="for_candidates">
+         <ul>
+            <li style="color:#fff;font-size:16px;font-weight:500;">For Candidates</li><br>
+            <li>Browse Jobs</li>
+            <li>Jobs Alerts</li>
+            <li>Applied Jobs</li>
+            <li>Bookmarks</li>
+         </ul>
+      </span>
+   </div>
+   <div class="copyright_section">
+      <div class="copyright">
+         <p>@ copyright 2018 Jobby by aashi.All Rights Reserved.</p>
+      </div>
+      <div class="links">
+         <ul>
+            <li>EN</li>
+            <li><i class="fab fa-facebook-f"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-google-plus-g"></i></li>
+            <li><i class="fab fa-linkedin-in"></i></li>
+         </ul>
+      </div>
+   </div>
+</div>
+
+
+

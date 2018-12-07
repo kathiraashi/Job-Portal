@@ -1,0 +1,218 @@
+<app-header></app-header>
+<div class="header_two">
+   <span style="margin-left: 6%;font-size: 20px;font-weight: 600;">Jobby</span>
+   <ul class="Menu1">
+      <a [routerLink]="['/landing_page']" ><li class="Menu_List1 ">Home</li></a>
+      <a [routerLink]="['/Job_Search']" ><li class="Menu_List1">Find Jobs</li></a>
+      <!-- <li class="Menu_List1">Find Work</li> -->
+      <a [routerLink]="['/Company_Profile']"><li class="Menu_List1 ">Find Companies</li></a>
+      <!-- <li class="Menu_List1">Find FreeLancers</li>
+      <li class="Menu_List1">pages</li> -->
+      <span class="search"><i class="material-icons">search</i></span>
+      <!-- <button mat-raised-button color="warn">Warn</button> -->
+      <!-- <a [routerLink]="['/registration']"  ><span class="post"><button>JOB SEEKER</button></span></a>
+      <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a> -->
+   </ul>
+</div>
+<div class="header_three">
+   <div class="left_content">
+      <p>Company Profile View</p>
+   </div>
+   <div class="right_content">
+      <p><a [routerLink]="['/landing_page']"><span>Home</span></a>/Company Profile View</p>
+   </div>
+</div><br><br>
+<div class="Filters">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-4 filters">
+            <div class="header">
+              <img src="../../../../assets/Images/company.png"><br>
+              <p>WP Market</p>
+              <button class="contact">CONTACT</button>
+            </div>
+            <div class="Websites">
+               <p>Websites</p>
+               <ul class="websites">
+                  <li><span><i class="fa fa-globe"></i></span> www.companysite.com</li>
+                  <li><span><i class="fa fa-edit"></i></span> www.blogsite.com</li>
+                  <li><span><i class="fa fa-globe"></i></span> Portfoliosite.com</li>
+               </ul>
+            </div>
+            <div class="Profile_Completeness">
+               <p>Profile Completeness</p>
+               <span style="margin-left: 10px;font-size: 15px;font-weight: 500; color: #ff4500;">80%</span>
+               <div class="profile_completeness">
+                  <div class="progress">
+                     <div class="one danger-color"></div>
+                     <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+                  </div>
+               </div>
+            </div>
+            <div class="Rating">
+               <p>Rating
+                  <span div class="rating">
+                     <span class="stars">
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star</i></span>
+                        <span><i class="material-icons star">star_half</i></span>
+                     </span>
+                  </span>
+               </p>
+            </div>
+            <div class="Location">
+               <p>Location <span> <i class="material-icons">location_on</i>New York City</span></p>
+               <div class="location">
+                  <img src="../../../../assets/Images/google map.jpg">
+                  <div class="row">
+                     <div class="col-sm-6 left_content">
+                        <p>Hourly Rate</p>
+                     </div>
+                     <div class="col-sm-6 right_content">
+                        <p>$50/hr</p>
+                     </div>
+                     <div class="col-sm-6 left_content">
+                        <p>Age</p>
+                     </div>
+                     <div class="col-sm-6 right_content">
+                        <p>30</p>
+                     </div>
+                     <div class="col-sm-6 left_content">
+                        <p>Experience</p>
+                     </div>
+                     <div class="col-sm-6 right_content">
+                        <p>5 Years</p>
+                     </div>
+                     <div class="col-sm-6 left_content">
+                        <p>Job Done</p>
+                     </div>
+                     <div class="col-sm-6 right_content">
+                        <p>69</p>
+                     </div>
+                  </div>
+               </div><br>
+               <div class="Social_Account">
+                  <p>Contact Social Account<span><i class="far fa-edit"></i></span></p>
+                  <span class="facebook_icon"><img src="../../../../assets/Images/facebook-icon.png"></span><p class="facebook">http://facebook.com</p>
+                  <span class="twitter_icon"><img src="../../../../assets/Images/twitter.png"></span><p class="twitter">http://twitter.com</p>
+                  <span class="linkedin_icon"><img src="../../../../assets/Images/linkedin.png"></span><p class="linkedin">http://linkedin.com</p>
+               </div><br><br>
+            </div>
+         </div>
+         <div class="col-sm-8">
+            <div class="main_header">
+               <ul class="Tabs">
+                  <li class="Tab" [ngClass]="{'active': Active_Tab === 'Profile'}" (click)="Active_Tab_Change('Profile')">
+                     <span >Profile</span>
+                  </li>
+                  <li class="Tab" [ngClass]="{'active': Active_Tab === 'Members'}" (click)="Active_Tab_Change('Members')">
+                     <span >Members</span>
+                  </li>
+                  <li class="Tab" [ngClass]="{'active': Active_Tab === 'Reviews'}" (click)="Active_Tab_Change('Reviews')">
+                     <span >Reviews</span>
+                  </li>
+                  <li>
+                     <span class="post"><a [routerLink]="['/Job_Post']" ><button>POST A JOB</button></a></span>
+                  </li>
+               </ul>
+            </div><br><br>
+            <div class="Content_Section">
+               <div class="Content_Header">
+                  <p>About</p>
+               </div>
+               <div class="Content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta perspiciatis aliquam necessitatibus expedita possimus impedit. Magnam, temporibus numquam? Quas minima, quisquam delectus tempore tenetur quis voluptas. Similique, alias quaerat.
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta perspiciatis aliquam necessitatibus expedita possimus impedit. Magnam, temporibus numquam? Quas minima, quisquam delectus tempore tenetur quis voluptas. Similique, alias quaerat.
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta perspiciatis aliquam necessitatibus expedita possimus impedit. Magnam, temporibus numquam? Quas minima, quisquam delectus tempore tenetur quis voluptas. Similique, alias quaerat.
+                  </p>
+               </div>
+            </div><br><br>
+            <div class="Skills_Section">
+               <div class="Skills_Header">
+                  <p>Skills</p>
+               </div>
+               <div class="buttons">
+                  <button class="ux"><span>UX</span></button>
+                  <button class="ui"><span>UI</span></button>
+                  <button class="photoshop"><span>Photoshop</span></button>
+                  <button class="photoshop"><span>Illustrator</span></button>
+                  <button class="photoshop"><span>CorelDraw</span></button>
+                  <button class="photoshop"><span>Graphic Design</span></button>
+               </div>
+            </div><br><br>
+            <div class="Language_Section">
+               <div class="Language_Header">
+                  <p>Language</p>
+               </div>
+               <div class="buttons">
+                  <button class="english">English</button>
+                  <button class="punjabi">Punjabi</button>
+                  <button class="hindi">Hindi</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="footer">
+      <div class="email_section">
+         <div class="news">
+            <p class="news_heading">Subscribe To News Letter</p>
+            <p class="news_content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         </div>
+         <div class="email">
+            <input type="text" placeholder="Your Email Address">
+            <span><button>Subscribe</button></span>
+         </div>
+      </div>
+      <div class="link_section">
+         <span class="company">
+            <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         </span>
+         <span class="about">
+            <ul>
+               <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>
+               <li>Login</li>
+               <li>My Account</li>
+               <li>Contact</li>
+               <li>Privacy Policy</li>
+               <li>Terms Of Use</li>
+            </ul>
+         </span>
+         <span class="for_companies">
+            <ul>
+               <li style="color:#fff;font-size:16px;font-weight:500;">For Companies</li><br>
+               <li>Browse Freelancers</li>
+               <li>Post a Job</li>
+               <li>Post a Project</li>
+               <li>Pricing Plans</li>
+            </ul>
+         </span>
+         <span class="for_candidates">
+            <ul>
+               <li style="color:#fff;font-size:16px;font-weight:500;">For Candidates</li><br>
+               <li>Browse Jobs</li>
+               <li>Jobs Alerts</li>
+               <li>Applied Jobs</li>
+               <li>Bookmarks</li>
+            </ul>
+         </span>
+      </div>
+      <div class="copyright_section">
+         <div class="copyright">
+            <p>@ copyright 2018 Jobby by aashi.All Rights Reserved.</p>
+         </div>
+         <div class="links">
+            <ul>
+               <li>EN</li>
+               <li><i class="fab fa-facebook-f"></i></li>
+               <li><i class="fab fa-twitter"></i></li>
+               <li><i class="fab fa-google-plus-g"></i></li>
+               <li><i class="fab fa-linkedin-in"></i></li>
+            </ul>
+         </div>
+      </div>
+   </div>
