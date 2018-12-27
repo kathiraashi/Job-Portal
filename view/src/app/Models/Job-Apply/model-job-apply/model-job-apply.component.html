@@ -11,19 +11,31 @@
          <p>Attach File With CV & Apply By Jobby Profile</p>
       </div><br>
       <div class="form_details">
-         <form>
+         <form  [formGroup]="Form">
             <div class="row">
-               <div class="col-sm-6">
-                  <input type="text" placeholder="Full Name"><br><br>
+               <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Full_Name'].pristine && Form.controls['Full_Name'].errors, 'Form_Success': Form.controls['Full_Name'].valid && !Form.controls['Full_Name'].pristine }">
+                  <input type="text" formControlName="Full_Name" placeholder="Full Name"><br><br>
+                  <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-top:-20px;" *ngIf="Form.controls['Full_Name'].errors && !Form.controls['Full_Name'].pristine">
+                     <span *ngIf="Form.controls['Full_Name'].errors.required">Full Name is required</span>
+                  </p>
                </div>
-               <div class="col-sm-6">
-                  <input type="text" placeholder="Email Address"><br><br>
+               <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Email_Address'].pristine && Form.controls['Email_Address'].errors, 'Form_Success': Form.controls['Email_Address'].valid && !Form.controls['Email_Address'].pristine }">
+                  <input type="text" formControlName="Email_Address" placeholder="Email Address"><br><br>
+                  <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-top:-20px;" *ngIf="Form.controls['Email_Address'].errors && !Form.controls['Email_Address'].pristine">
+                     <span *ngIf="Form.controls['Email_Address'].errors.required">Email Address is required</span>
+                  </p>
                </div>
-               <div class="col-sm-6">
-                  <input type="text" placeholder="Phone No"><br><br>
+               <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Phone_No'].pristine && Form.controls['Phone_No'].errors, 'Form_Success': Form.controls['Phone_No'].valid && !Form.controls['Phone_No'].pristine }">
+                  <input type="text" formControlName="Phone_No" placeholder="Phone No"><br><br>
+                  <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-top:-20px;" *ngIf="Form.controls['Phone_No'].errors && !Form.controls['Phone_No'].pristine">
+                     <span *ngIf="Form.controls['Phone_No'].errors.required">Phone No is required</span>
+                  </p>
                </div>
-               <div class="col-sm-6">
-                  <input type="text" placeholder="Experience"><br><br>
+               <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Experience'].pristine && Form.controls['Experience'].errors, 'Form_Success': Form.controls['Experience'].valid && !Form.controls['Experience'].pristine }">
+                  <input type="text" formControlName="Experience" placeholder="Experience"><br><br>
+                  <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-top:-20px;" *ngIf="Form.controls['Experience'].errors && !Form.controls['Experience'].pristine">
+                     <span *ngIf="Form.controls['Experience'].errors.required">Experience is required</span>
+                  </p>
                </div>
             </div>
          </form>

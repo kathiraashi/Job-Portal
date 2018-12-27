@@ -6,7 +6,7 @@
       <a [routerLink]="['/landing_page']" ><li class="Menu_List1 ">Home</li></a>
       <a [routerLink]="['/Job_Search']"><li class="Menu_List1">Find Jobs</li></a>
       <!-- <li class="Menu_List1">Find Work</li> -->
-      <a [routerLink]="['/Company_Profile']"><li class="Menu_List1 ">Find Companies</li></a>
+      <a [routerLink]="['/Company_List']"><li class="Menu_List1 " [routerLinkActive]="'active'" >Find Companies</li></a>
       <!-- <li class="Menu_List1">Find FreeLancers</li>
       <li class="Menu_List1">pages</li> -->
       <span class="search"><i class="material-icons">search</i></span>
@@ -15,6 +15,7 @@
       <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a>
    </ul>
 </div>
+<!-- Header Three -->
 <div class="header_three">
    <div class="left_content">
       <p>Sign In</p>
@@ -23,23 +24,36 @@
       <p><a [routerLink]="['/landing_page']"><span>Home</span></a>/Sign In</p>
    </div>
 </div><br><br>
+<!-- Sign In Details -->
 <div class="Sign_In_Details">
    <div class="container">
       <div class="row">
          <div class="col-sm-6 signin_Details">
             <h5>Sign in to Jobby</h5>
             <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:30%"></div><br><br>
-            <form>
-               <label>Email Address</label><br>
-               <input type="text" placeholder="Enter Email Address"><br>
-               <label>Password</label><br>
-               <input type="text" placeholder="Enter Password"><br>
+            <form [formGroup]="Form">
+               <div class="row">
+                  <div class="col-sm-12" [ngClass]="{'Form_Err': !Form.controls['Email_Id'].pristine && Form.controls['Email_Id'].errors, 'Form_Success': Form.controls['Email_Id'].valid && !Form.controls['Email_Id'].pristine }">
+                     <label>Email Address</label><br>
+                     <input type="text" formControlName="Email_Id" placeholder="Enter Email Address">
+                     <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Email_Id'].errors && !Form.controls['Email_Id'].pristine">
+                        <span *ngIf="Form.controls['Email_Id'].errors.required">Email Id is required</span>
+                     </p>    
+                  </div>
+                  <div class="col-sm-12" [ngClass]="{'Form_Err': !Form.controls['Password'].pristine && Form.controls['Password'].errors, 'Form_Success': Form.controls['Password'].valid && !Form.controls['Password'].pristine }">
+                     <label>Password</label><br>
+                     <input type="text" formControlName="Password" placeholder="Enter Password">
+                     <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Password'].errors && !Form.controls['Password'].pristine">
+                        <span *ngIf="Form.controls['Password'].errors.required">Password is required</span>
+                     </p>  
+                  </div>
+               </div>
             </form><br>
             <div class="Sign_In_Button">
-               <a [routerLink]="['/Company_Profile']" ><button class="sign_in_button">SIGN IN NOW</button></a>
+               <a (click)="submit()"><button class="sign_in_button">SIGN IN NOW</button></a>
             </div>
             <div class="forget_password">
-               <span class="account">Need an account? <span class="join">Join Us Now >></span></span><span class="forget">Forget Password?</span>
+               <span class="account">Need an account? <a [routerLink]="['/Employer_Registration']" ><span class="join">Join Us Now >></span></a> </span><span class="forget">Forget Password?</span>
                <span></span>
             </div>
          </div>
@@ -49,6 +63,7 @@
       </div>
    </div>
 </div><br><br>
+<!-- Footer -->
 <div class="footer">
    <div class="email_section">
       <div class="news">
@@ -61,10 +76,6 @@
       </div>
    </div>
    <div class="link_section">
-      <span class="company">
-         <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </span>
       <span class="about">
          <ul>
             <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>

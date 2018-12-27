@@ -1,11 +1,12 @@
 <app-header></app-header>
+<!-- Header Two -->
 <div class="header_two">
    <span style="margin-left: 6%;font-size: 20px;font-weight: 600;">Jobby</span>
    <ul class="Menu1">
       <a [routerLink]="['/landing_page']" ><li class="Menu_List1 ">Home</li></a>
       <a [routerLink]="['/Job_Search']" ><li class="Menu_List1">Find Jobs</li></a>
       <!-- <li class="Menu_List1">Find Work</li> -->
-      <a [routerLink]="['/Company_Profile']"><li class="Menu_List1 ">Find Companies</li></a>
+      <a [routerLink]="['/Company_List']"><li class="Menu_List1 " [routerLinkActive]="'active'" >Find Companies</li></a>
       <!-- <li class="Menu_List1">Find FreeLancers</li>
       <li class="Menu_List1">pages</li> -->
       <span class="search"><i class="material-icons">search</i></span>
@@ -14,6 +15,7 @@
       <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a> -->
    </ul>
 </div>
+<!-- Header Three -->
 <div class="header_three">
    <div class="left_content">
       <p>Company Profile View</p>
@@ -22,21 +24,22 @@
       <p><a [routerLink]="['/landing_page']"><span>Home</span></a>/Company Profile View</p>
    </div>
 </div><br><br>
+<!-- Filters -->
 <div class="Filters">
    <div class="container">
       <div class="row">
-         <div class="col-sm-4 filters">
+         <div class="col-sm-3 filters">
             <div class="header">
-              <img src="../../../../assets/Images/company.png"><br>
-              <p>WP Market</p>
+              <img src="../../../../assets/Images/{{CompanyData?.Company_Image}}"><br>
+              <p>{{CompanyData?.Company_Name}}</p>
               <button class="contact">CONTACT</button>
             </div>
             <div class="Websites">
                <p>Websites</p>
                <ul class="websites">
-                  <li><span><i class="fa fa-globe"></i></span> www.companysite.com</li>
-                  <li><span><i class="fa fa-edit"></i></span> www.blogsite.com</li>
-                  <li><span><i class="fa fa-globe"></i></span> Portfoliosite.com</li>
+                  <li><span><i class="fa fa-globe"></i></span> {{CompanyData?.Company_Website}}</li>
+                  <li><span><i class="fa fa-edit"></i></span> {{CompanyData?.Company_Website}}</li>
+                  <li><span><i class="fa fa-globe"></i></span> {{CompanyData?.Company_Website}}</li>
                </ul>
             </div>
             <div class="Profile_Completeness">
@@ -45,7 +48,7 @@
                <div class="profile_completeness">
                   <div class="progress">
                      <div class="one danger-color"></div>
-                     <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+                     <div class="progress-bar progress-bar-danger" style="width: 85%"></div>
                   </div>
                </div>
             </div>
@@ -63,7 +66,7 @@
                </p>
             </div>
             <div class="Location">
-               <p>Location <span> <i class="material-icons">location_on</i>New York City</span></p>
+               <p>Location <span> <i class="material-icons">location_on</i>{{CompanyData?.Location}}</span></p>
                <div class="location">
                   <img src="../../../../assets/Images/google map.jpg">
                   <div class="row">
@@ -101,7 +104,7 @@
                </div><br><br>
             </div>
          </div>
-         <div class="col-sm-8">
+         <div class="col-sm-9">
             <div class="main_header">
                <ul class="Tabs">
                   <li class="Tab" [ngClass]="{'active': Active_Tab === 'Profile'}" (click)="Active_Tab_Change('Profile')">
@@ -123,23 +126,15 @@
                   <p>About</p>
                </div>
                <div class="Content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta perspiciatis aliquam necessitatibus expedita possimus impedit. Magnam, temporibus numquam? Quas minima, quisquam delectus tempore tenetur quis voluptas. Similique, alias quaerat.
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta perspiciatis aliquam necessitatibus expedita possimus impedit. Magnam, temporibus numquam? Quas minima, quisquam delectus tempore tenetur quis voluptas. Similique, alias quaerat.
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta perspiciatis aliquam necessitatibus expedita possimus impedit. Magnam, temporibus numquam? Quas minima, quisquam delectus tempore tenetur quis voluptas. Similique, alias quaerat.
-                  </p>
+                  <p>{{CompanyData?.About}}</p>
                </div>
             </div><br><br>
             <div class="Skills_Section">
                <div class="Skills_Header">
                   <p>Skills</p>
                </div>
-               <div class="buttons">
-                  <button class="ux"><span>UX</span></button>
-                  <button class="ui"><span>UI</span></button>
-                  <button class="photoshop"><span>Photoshop</span></button>
-                  <button class="photoshop"><span>Illustrator</span></button>
-                  <button class="photoshop"><span>CorelDraw</span></button>
-                  <button class="photoshop"><span>Graphic Design</span></button>
+               <div class="buttons"  *ngFor="let item of CompanyData?.skills; let i=index">
+                  <button class="ux"><span>{{item?.skill}}</span></button>
                </div>
             </div><br><br>
             <div class="Language_Section">
@@ -156,6 +151,7 @@
       </div>
    </div>
 </div>
+<!-- Footer -->
 <div class="footer">
       <div class="email_section">
          <div class="news">
@@ -168,10 +164,6 @@
          </div>
       </div>
       <div class="link_section">
-         <span class="company">
-            <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-         </span>
          <span class="about">
             <ul>
                <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>

@@ -11,6 +11,7 @@ import { EmployerRegistrationComponent } from './Components/Registration/Employe
 import { JobSearchPageComponent } from './Components/Job-Search-Page/job-search-page/job-search-page.component';
 import { CompanyProfileComponent } from './Components/Company-Profile/company-profile/company-profile.component';
 import { CompanyListComponent } from './Components/Company-Profile/Company-List/company-list/company-list.component';
+import { EmployerSignInComponent } from './Components/Sign-In/Employer_Sign_In/employer-sign-in/employer-sign-in.component';
 
 
 const appRoutes: Routes = [
@@ -25,7 +26,7 @@ const appRoutes: Routes = [
       data: { animation: { value: 'landing_page'}  }
    },
    {
-      path: 'Job_View',
+      path: 'Job_View/:job_id',
       component: JobApplyComponent,
       data: { animation: { value: 'Job_View'}  }
    },
@@ -51,7 +52,7 @@ const appRoutes: Routes = [
    },
    {
       path: 'Employer_sign_In',
-      component: SignInComponent,
+      component: EmployerSignInComponent,
       data: { animation: { value: 'Employer_sign_In'}  }
    },
    {
@@ -65,7 +66,7 @@ const appRoutes: Routes = [
       data: { animation: { value: 'Job_Search'}  }
    },
    {
-      path: 'Company_Profile',
+      path: 'Company_Profile/:Company_Id',
       component: CompanyProfileComponent,
       data: { animation: { value: 'Company_Profile'}  }
    },

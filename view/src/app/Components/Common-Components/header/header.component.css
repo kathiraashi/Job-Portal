@@ -15,11 +15,15 @@
    font-size: 16px;
    font-weight: 400;
    color: #b1a8a8;
+   font-family: roboto, sans-serif;
 }
 .header_one .Profile{
-   float:right;
-   margin-right:20px;
-   margin-top: 5px;
+   float: right;
+   margin-right: 20px;
+   margin-top: 7px;
+   font-size: 14px;
+   font-weight: 600;
+   font-family: roboto, sans-serif;
 }
 .header_one .Profile .mail{
    margin-top:5px;

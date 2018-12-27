@@ -9,4 +9,11 @@
 .mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
    background-color: #FF4500;
    outline: none;
+   margin-top:25px;
+}
+
+/* date Picker */
+.cdk-overlay-container {
+   position: fixed;
+   z-index: 1052 !important; 
 }

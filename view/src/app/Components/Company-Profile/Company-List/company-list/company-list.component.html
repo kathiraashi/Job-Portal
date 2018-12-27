@@ -1,11 +1,12 @@
 <app-header></app-header>
+<!-- Header Two -->
 <div class="header_two">
    <span style="margin-left: 6%;font-size: 20px;font-weight: 600;">Jobby</span>
    <ul class="Menu1">
       <a [routerLink]="['/landing_page']" ><li class="Menu_List1 ">Home</li></a>
       <a [routerLink]="['/Job_Search']" ><li class="Menu_List1">Find Jobs</li></a>
       <!-- <li class="Menu_List1">Find Work</li> -->
-      <a [routerLink]="['/Company_Profile']"><li class="Menu_List1 ">Find Companies</li></a>
+      <a [routerLink]="['/Company_List']"><li class="Menu_List1 " [routerLinkActive]="'active'" >Find Companies</li></a>
       <!-- <li class="Menu_List1">Find FreeLancers</li>
       <li class="Menu_List1">pages</li> -->
       <span class="search"><i class="material-icons">search</i></span>
@@ -14,6 +15,7 @@
       <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a> -->
    </ul>
 </div>
+<!-- Header Three -->
 <div class="header_three">
    <div class="left_content">
       <p>Browser Companies List</p>
@@ -22,10 +24,11 @@
       <p><a [routerLink]="['/landing_page']"><span>Home</span></a>/Browser Companies List</p>
    </div>
 </div><br><br>
+<!-- Filters -->
 <div class="Filters">
    <div class="container">
       <div class="row">
-         <div class="col-sm-4 filters">
+         <div class="col-sm-3 filters">
             <div class="header">
                <p>Filters <span>Clear All Filters</span></p>
             </div>
@@ -35,21 +38,27 @@
                <div class="buttons">
                   <button class="ux"><span>UX</span></button>
                   <button class="ui"><span>UI</span></button>
-                  <button class="photoshop"><span>Wordpress</span></button>
-                  <button class="photoshop"><span>PHP</span></button><br><br>
+                  <button class="photoshop"><span>Wordpress</span></button><br><br>
+                  <button class="photoshop"><span>PHP</span></button>
                   <button class="photoshop"><span>Html</span></button>
-                  <button class="photoshop"><span>Opencart</span></button>
+                  <button class="photoshop"><span>Opencart</span></button><br><br>
                   <button class="photoshop"><span>Photoshop</span></button>
                </div>
             </div>
             <div class="Category">   
                <p>Category <span>Clear</span></p>
                <div class="category">
-                  <select>
+                  <!-- <select>
                      <option>All Category</option>
                      <option>Category</option>
                      <option>Category</option>
-                  </select>
+                  </select> -->
+                  <ng-select class="NgSelect" 
+                     [items]="_Category" 
+                     [searchable]="true" 
+                     formControlName="Category"
+                     placeholder="Select an Category">
+                  </ng-select> 
                </div>
             </div>
             <div class="Series">
@@ -60,6 +69,12 @@
                      <option>Level</option>
                      <option>Level</option>
                   </select>
+                  <!-- <ng-select class="NgSelect" 
+                     [items]="_Relevance" 
+                     [searchable]="true" 
+                     formControlName="Relevance"
+                     placeholder="Relevance">
+                  </ng-select>  -->
                </div>
             </div>
             <div class="Location">
@@ -72,7 +87,8 @@
                </div><br><br>
             </div>
          </div>
-         <div class="col-sm-8 Jobs">
+         <!-- Job -->
+         <div class="col-sm-9 Jobs">
             <div class="Main_Header">
                <div class="image_section">
                   <img src="../../../../assets/Images/job-search.png">
@@ -87,172 +103,128 @@
             </div><br><br>
             <div class="main_header">
                <ul class="Tabs">
-                  <li style="font-size: 14px;font-weight: 500;color: #383636;margin-top: 10px;"><span>Search Results</span></li>
-                 <li style="margin-left: 293px; margin-right: 10px"><span style=" font-size: 14px;font-weight: 500;color: #292727;">Sort by: </span>
-                     <span>
-                        <select>
-                           <option>Relevance</option>
-                           <option>less than 1 year</option>
-                           <option>above 4 yrs</option>
-                        </select>
+                  <li style="font-size: 14px;font-weight: 600;color: #383636;margin-top: 10px;font-family: roboto,sans-serif;"><span>Search Results</span></li>
+                 <li style="margin-left: 293px; margin-right: 10px">
+                  <div class="relevance_section">
+                     <span class="sort_by" style=" font-size: 14px;font-weight: 600;color: #383636;font-family: roboto,sans-serif;width: 35%;">Sort by: 
                      </span>
+                     <span class="relevance">
+                        <ng-select style="width:130%" class="NgSelect" 
+                           [items]="_Relevance" 
+                           [searchable]="true" 
+                           formControlName="Relevance"
+                           placeholder="Relevance">
+                        </ng-select> 
+                     </span>
+                  </div>
                   </li>
-                  <li style="margin-left: 15px;margin-right: 10px"><span><i class="material-icons grid">grid_on</i></span></li>
-                  <li style="margin-right: 10px"><span><i class="material-icons menu"> menu</i></span></li>
+                  <li style="margin-left: 15px;margin-right: 10px" [ngClass]="{'active': Active_Tab === 'grid'}" (click)="Active_Tab_Change('grid')"><span><i class="material-icons grid">grid_on</i></span></li>
+                  <li style="margin-right: 10px" [ngClass]="{'active': Active_Tab === 'list'}" (click)="Active_Tab_Change('list')"><span><i class="material-icons list"> menu</i></span></li>
                </ul>
             </div><br><br>
-            <div class="Company">
-               <div class="Company_Section">
-                  <div class="Image_Section">
-                     <img src="../../../../../assets/Images/company.png">
-                  </div>
-                  <div class="Name_Section">
-                     <p class="Name">Gambol Themes</p>
-                     <p class="Website">www.gambolthemes.net</p>
-                  </div>
-                  <div class="Rating_Section">
-                     <p class="rating">Rating</p>
-                     <p>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star_half</i></span>
-                     </p>
-                  </div>
-                  <div class="location_section">
-                     <p class="location">Location</p>
-                     <p style="margin-bottom: 3px;font-size: 16px;font-weight: 600;color: #bfbbbb;"><span><i class="material-icons loca">location_on</i></span>Australia</p>
+            <div class="List_View" *ngIf="Active_Tab === 'list'">
+               <div class="Company" *ngFor="let item of results; let i=index">
+                  <div class="Company_Section">
+                     <div class="Image_Section">
+                        <img src="../../../../../assets/Images/{{item.Company_Image}}">
+                     </div><br>
+                     <div class="Name_Section">
+                        <p class="Name">{{item.Company_Name}}</p>
+                        <p class="Website">{{item.Company_Website}}</p>
+                     </div>
+                    <div class="Rating_Section">
+                        <p class="rating">Rating</p>
+                        <p>
+                           <span><i class="material-icons star">star</i></span>
+                           <span><i class="material-icons star">star</i></span>
+                           <span><i class="material-icons star">star</i></span>
+                           <span><i class="material-icons star">star</i></span>
+                           <span><i class="material-icons star">star_half</i></span>
+                        </p>
+                     </div>
+                     <div class="location_section">
+                        <p class="location">Location</p>
+                        <p style="margin-bottom: 3px;font-size: 14px;font-weight: 600;color: #bfbbbb;"><span><i class="material-icons loca">location_on</i></span>{{item.Location}}</p>
+                     </div>
+                  </div><br>
+                  <div class="About_Section">
+                     <h6>About</h6>
+                     <p>{{item.About}}</p>
+                  </div><br>
+                  <div class="Button_Section">
+                     <button class="ux" *ngFor="let skill of item.skills"><span>{{skill.skill}}</span></button>
+                  </div><br>
+                  <div class="job_footer">
+                     <div class="row" style="border-top: 1px solid #ddd;">
+                        <div class="col-sm-10 button">
+                           <a [routerLink]="['/Company_Profile', item.Company_Id]"><P>VIEW COMPANY PROFILE</P></a>
+                        </div> 
+                        <div class="col-sm-2 ">
+                           <!-- <button mat-mini-fab>
+                              <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                           </button> -->
+                        </div>
+                     </div>
+                  </div> 
+               </div>
+            </div>
+            <div class="Grid_View" *ngIf="Active_Tab === 'grid'">
+               <div class="row">
+                  <div class="col-sm-6 Company_List" *ngFor="let item of results; let i=index">
+                     <div class="company" >
+                        <div class="company_section">
+                           <div class="image_section">
+                              <img src="../../../../../assets/Images/{{item.Company_Image}}">
+                           </div>
+                           <div class="name_section">
+                              <p class="name">{{item.Company_Name}}</p>
+                              <p class="website">{{item.Company_Website}}</p>
+                           </div><br>
+                           <div class="About_Section">
+                              <h6>About</h6>
+                              <p>{{item.About}}</p>
+                           </div><br>
+                           <div class="Button_Section">
+                              <button class="ux" *ngFor="let skill of item.skills"><span>{{skill.skill}}</span></button>
+                           </div><br>
+                           <div class="footer_section">
+                              <span class="rating_section">
+                              <p class="Rating">Rating</p>
+                              <p>
+                                 <span style="margin-left:-20px"><i class="material-icons Star">star</i></span>
+                                 <span><i class="material-icons Star">star</i></span>
+                                 <span><i class="material-icons Star">star</i></span>
+                                 <span><i class="material-icons Star">star</i></span>
+                                 <span><i class="material-icons Star">star_half</i></span>
+                              </p>
+                              </span>
+                              <span class="Location_Section">
+                                 <p class="Location">Location</p><br>
+                                 <p style="margin-bottom: 3px;font-size: 14px;font-weight: 600;color: #bfbbbb;float: right;margin-left: 10px;"><span style="margin-left:10px;"><i class="material-icons Loc">location_on</i></span>{{item.Location}}</p>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="Job_Footer">
+                           <div class="row" style="border-top: 1px solid #ddd;">
+                              <div class="col-sm-10 Button">
+                                 <a [routerLink]="['/Company_Profile', item.Company_Id]"><P>VIEW COMPANY PROFILE</P></a>
+                              </div> 
+                              <div class="col-sm-2 ">
+                                 <!-- <button mat-mini-fab>
+                                    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                                 </button> -->
+                              </div>
+                           </div>
+                        </div> 
+                     </div>
                   </div>
                </div>
-               <div class="job_footer">
-                  <div class="row" style="border-top: 1px solid #ddd;">
-                     <div class="col-sm-10 button">
-                        <a [routerLink]="['/Company_Profile']"><P>VIEW COMPANY PROFILE</P></a>
-                     </div> 
-                     <div class="col-sm-2 ">
-                        <!-- <button mat-mini-fab>
-                           <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                        </button> -->
-                    </div>
-                  </div>
-               </div> 
-            </div><br><br>
-            <div class="Company">
-               <div class="Company_Section">
-                  <div class="Image_Section">
-                     <img src="../../../../../assets/Images/company.png">
-                  </div>
-                  <div class="Name_Section">
-                     <p class="Name">Gambol Themes</p>
-                     <p class="Website">www.gambolthemes.net</p>
-                  </div>
-                  <div class="Rating_Section">
-                     <p class="rating">Rating</p>
-                     <p>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star_half</i></span>
-                     </p>
-                  </div>
-                  <div class="location_section">
-                     <p class="location">Location</p>
-                     <p style="margin-bottom: 3px;font-size: 16px;font-weight: 600;color: #bfbbbb;"><span><i class="material-icons loca">location_on</i></span>Australia</p>
-                  </div>
-               </div>
-               <div class="job_footer">
-                  <div class="row" style="border-top: 1px solid #ddd;">
-                     <div class="col-sm-10 button">
-                        <a [routerLink]="['/Company_Profile']"><P>VIEW COMPANY PROFILE</P></a>
-                     </div> 
-                     <div class="col-sm-2 ">
-                        <!-- <button mat-mini-fab>
-                           <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                        </button> -->
-                    </div>
-                  </div>
-               </div> 
-            </div><br><br>
-            <div class="Company">
-               <div class="Company_Section">
-                  <div class="Image_Section">
-                     <img src="../../../../../assets/Images/company.png">
-                  </div>
-                  <div class="Name_Section">
-                     <p class="Name">Gambol Themes</p>
-                     <p class="Website">www.gambolthemes.net</p>
-                  </div>
-                  <div class="Rating_Section">
-                     <p class="rating">Rating</p>
-                     <p>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star_half</i></span>
-                     </p>
-                  </div>
-                  <div class="location_section">
-                     <p class="location">Location</p>
-                     <p style="margin-bottom: 3px;font-size: 16px;font-weight: 600;color: #bfbbbb;"><span><i class="material-icons loca">location_on</i></span>Australia</p>
-                  </div>
-               </div>
-               <div class="job_footer">
-                  <div class="row" style="border-top: 1px solid #ddd;">
-                     <div class="col-sm-10 button">
-                        <a [routerLink]="['/Company_Profile']"><P>VIEW COMPANY PROFILE</P></a>
-                     </div> 
-                     <div class="col-sm-2 ">
-                        <!-- <button mat-mini-fab>
-                           <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                        </button> -->
-                    </div>
-                  </div>
-               </div> 
-            </div><br><br>
-            <div class="Company">
-               <div class="Company_Section">
-                  <div class="Image_Section">
-                     <img src="../../../../../assets/Images/company.png">
-                  </div>
-                  <div class="Name_Section">
-                     <p class="Name">Gambol Themes</p>
-                     <p class="Website">www.gambolthemes.net</p>
-                  </div>
-                  <div class="Rating_Section">
-                     <p class="rating">Rating</p>
-                     <p>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star</i></span>
-                        <span><i class="material-icons star">star_half</i></span>
-                     </p>
-                  </div>
-                  <div class="location_section">
-                     <p class="location">Location</p>
-                     <p style="margin-bottom: 3px;font-size: 16px;font-weight: 600;color: #bfbbbb;"><span><i class="material-icons loca">location_on</i></span>Australia</p>
-                  </div>
-               </div>
-               <div class="job_footer">
-                  <div class="row" style="border-top: 1px solid #ddd;">
-                     <div class="col-sm-10 button">
-                        <a [routerLink]="['/Company_Profile']"><P>VIEW COMPANY PROFILE</P></a>
-                     </div> 
-                     <div class="col-sm-2 ">
-                        <!-- <button mat-mini-fab>
-                           <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                        </button> -->
-                    </div>
-                  </div>
-               </div> 
             </div>
          </div>
       </div>
    </div>
 </div><br><br><br>
+<!-- Footer -->
 <div class="footer">
    <div class="email_section">
       <div class="news">
@@ -265,10 +237,6 @@
       </div>
    </div>
    <div class="link_section">
-      <span class="company">
-         <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </span>
       <span class="about">
          <ul>
             <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>

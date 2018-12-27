@@ -6,7 +6,7 @@
       <a [routerLink]="['/landing_page']" ><li class="Menu_List1 ">Home</li></a>
       <a [routerLink]="['/Job_Search']" ><li class="Menu_List1">Find Jobs</li></a>
       <!-- <li class="Menu_List1">Find Work</li> -->
-      <a [routerLink]="['/Company_Profile']"><li class="Menu_List1 ">Find Companies</li></a>
+      <a [routerLink]="['/Company_List']"><li class="Menu_List1 " [routerLinkActive]="'active'" >Find Companies</li></a>
       <!-- <li class="Menu_List1">Find FreeLancers</li>
       <li class="Menu_List1">pages</li> -->
       <span class="search"><i class="material-icons">search</i></span>
@@ -15,6 +15,7 @@
       <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a> -->
    </ul>
 </div>
+<!-- Header Three -->
 <div class="header_three">
    <div class="left_content">
       <p>Browser Jobs List</p>
@@ -23,65 +24,69 @@
       <p><a [routerLink]="['/landing_page']"><span>Home</span></a>/Browser Jobs List</p>
    </div>
 </div><br><br>
+<!-- Filters -->
 <div class="Filters">
    <div class="container">
+      <form [formGroup]="Form">
       <div class="row">
-         <div class="col-sm-4 filters">
+         <div class="col-sm-3 filters">
             <div class="header">
-               <p>Filters <span>Clear All Filters</span></p>
-            </div>
-            <div class="skills">
-               <p>Skills <span>Clear</span></p>
-               <input type="text" placeholder="Keywords"><br><br>
-               <div class="buttons">
-                  <button class="ux"><span>UX</span></button>
-                  <button class="ui"><span>UI</span></button>
-                  <button class="photoshop"><span>Wordpress</span></button>
-                  <button class="photoshop"><span>PHP</span></button><br><br>
-                  <button class="photoshop"><span>Html</span></button>
-                  <button class="photoshop"><span>Opencart</span></button>
-                  <button class="photoshop"><span>Photoshop</span></button>
+                  <p>Filters <span>Clear All Filters</span></p>
+               </div>
+               <div class="skills">
+                  <p>Skills <span>Clear</span></p>
+                  <input type="text" placeholder="Keywords"><br><br>
+                  <div class="buttons">
+                     <button class="ux"><span>UX</span></button>
+                     <button class="ui"><span>UI</span></button>
+                     <button class="photoshop"><span>Wordpress</span></button><br><br>
+                     <button class="photoshop"><span>PHP</span></button>
+                     <button class="photoshop"><span>Html</span></button>
+                     <button class="photoshop"><span>Opencart</span></button><br><br>
+                     <button class="photoshop"><span>Photoshop</span></button>
+                  </div>
+               </div>
+               <div class="Availability">
+                  <p>Availability <span>Clear</span></p>
+                  <ul class="availability">
+                     <li><span><i class="material-icons">check_circle</i></span> Hourly</li>
+                     <li><span><i class="material-icons">check_circle</i></span> Part Time</li>
+                     <li><span><i class="material-icons">check_circle</i></span>Full Time</li>
+                  </ul>
+               </div>
+               <div class="Job_Type">
+                  <p>Job Type <span>Clear</span></p>
+                  <div class="job_type">
+                  <ng-select class="NgSelect" 
+                     [items]="_Job_Type" 
+                     [searchable]="true" 
+                     formControlName="Job_Type"
+                     placeholder="Job Type">
+                  </ng-select> 
+                  </div>
+               </div>
+               <div class="Experience_Level">
+                  <p>Experience Level <span>Clear</span></p>
+                  <div class="experience_level">
+                     <ng-select class="NgSelect" 
+                        [items]="_Experience_Level" 
+                        [searchable]="true" 
+                        formControlName="Experience_Level"
+                        placeholder="Experience Level">
+                     </ng-select> 
+                  </div>
+               </div>
+               <div class="Location">
+                  <p>Location <span>Clear</span></p>
+                  <div class="location">
+                  <input type="text" placeholder="Enter State Or Country">
+                  </div><br>
+                  <div class="Search_Now">
+                     <button class="search_now">SEARCH NOW</button>
+                  </div><br><br>
                </div>
             </div>
-            <div class="Availability">
-               <p>Availability <span>Clear</span></p>
-               <ul class="availability">
-                  <li><span><i class="material-icons">check_circle</i></span> Hourly</li>
-                  <li><span><i class="material-icons">check_circle</i></span> Part Time</li>
-                  <li><span><i class="material-icons">check_circle</i></span>Full Time</li>
-               </ul>
-            </div>
-            <div class="Job_Type">
-               <p>Job Type <span>Clear</span></p>
-               <div class="job_type">
-                  <select>
-                     <option>Select Job Type</option>
-                     <option>Job Type</option>
-                     <option>Job Type</option>
-                  </select>
-               </div>
-            </div>
-            <div class="Experience_Level">
-               <p>Experience Level <span>Clear</span></p>
-               <div class="experience_level">
-                  <select>
-                     <option>Select Experience Level</option>
-                     <option>Level</option>
-                     <option>Level</option>
-                  </select>
-               </div>
-            </div>
-            <div class="Location">
-               <p>Location <span>Clear</span></p>
-               <div class="location">
-                 <input type="text" placeholder="Enter State Or Country">
-               </div><br>
-               <div class="Search_Now">
-                  <button class="search_now">SEARCH NOW</button>
-               </div><br><br>
-            </div>
-         </div>
-         <div class="col-sm-8 Jobs">
+         <div class="col-sm-9 Jobs">
             <div class="Main_Header">
                <div class="image_section">
                   <img src="../../../../assets/Images/job-search.png">
@@ -105,50 +110,50 @@
                   <li class="Tab" [ngClass]="{'active': Active_Tab === 'Part_Time'}" (click)="Active_Tab_Change('Part_Time')">
                      <span >Part Time</span>
                   </li>
-                  <li style="margin-left: 100px; margin-right: 10px"><span style=" font-size: 14px;font-weight: 500;color: #292727;">Sort by: </span>
-                     <span>
-                     <select>
-                           <option>Relevance</option>
-                           <option>less than 1 year</option>
-                           <option>above 4 yrs</option>
-                        </select>
-                     </span>
+                  <li style="margin-left: 100px; margin-right: 10px">
+                     <div class="relevance_section">
+                        <span class="sort_by" style=" font-size: 14px;font-weight: 600;color: #292727;font-family: roboto,sans-serif;width:65%;">Sort by: </span>
+                        <span class="relevance">
+                           <!-- <select>
+                              <option>Relevance</option>
+                              <option>less than 1 year</option>
+                              <option>above 4 yrs</option>
+                           </select> -->
+                           <ng-select style="width:130%" class="NgSelect" 
+                              [items]="_Relevance" 
+                              [searchable]="true" 
+                              formControlName="Relevance"
+                              placeholder="Relevance">
+                           </ng-select> 
+                        </span>
+                     </div>
                   </li>
-                  <li style="margin-left: 15px;margin-right: 10px"><span><i class="material-icons grid">grid_on</i></span></li>
-                  <li style="margin-right: 10px"><span><i class="material-icons menu"> menu</i></span></li>
+                  <li style="margin-left: 15px;margin-right: 10px" [ngClass]="{'active': Active_Tab1 === 'grid'}" (click)="Active_Tab1_Change('grid')"><span><i class="material-icons grid">grid_on</i></span></li>
+                  <li style="margin-right: 10px" [ngClass]="{'active': Active_Tab1 === 'List'}" (click)="Active_Tab1_Change('List')"><span><i class="material-icons list"> menu</i></span></li>
                </ul>
             </div><br><br>
-            <div class="Newest_Job" *ngIf="Active_Tab === 'Newest_Job'">
+            <div class="List" *ngIf="Active_Tab === 'Newest_Job' || Active_Tab === 'List'">
                <div class="row">
-                  <div class="col-sm-12 job">
+                  <div class="col-sm-12 job" *ngFor="let item of results; let i=index">
                      <div class="header">
                         <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
+                           <img src="../../../../assets/Images/{{item.user_image}}">
                         </span>
                         <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
+                           <p class="name">  {{item.name}} </p>
+                           <p class="location"><span><i class="material-icons">location_on</i></span> {{item.location}}</p>
                         </span>
                         <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
+                           <p class="Price">{{item.price}}</p>
+                           <p><button class="button">{{item.job_Type}}</button></p>
                         </span>
                      </div><br>
                      <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h4>{{item.designation}}</h4>
+                        <p>{{item.description}}</p>
                      </div><br>
                      <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
+                        <button class="ux" *ngFor="let skill of item.skills"><span>{{skill.skill}}</span></button>
                      </div><br>
                      <div class="job_footer">
                         <div class="row" style="border-top: 1px solid #ddd;">
@@ -156,7 +161,7 @@
                               <p (click)="JobApply()">APPLY NOW</p>
                            </div>
                            <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
+                              <a [routerLink]="['/Job_View', item.job_id]"><P>VIEW JOB</P></a>
                            </div> 
                            <div class="col-sm-2 ">
                               <!-- <button mat-mini-fab>
@@ -166,193 +171,38 @@
                         </div>
                      </div>
                   </div>
-               </div><br>
-               <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
-                        </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                        </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
-                        </span>
-                     </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
-                     </div><br>
-                     <div class="job_footer">
-                        <div class="row" style="border-top: 1px solid #ddd;">
-                           <div class="col-sm-5 button">
-                              <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
-                        </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                        </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
-                        </span>
-                     </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
-                     </div><br>
-                     <div class="job_footer">
-                        <div class="row" style="border-top: 1px solid #ddd;">
-                           <div class="col-sm-5 button">
-                              <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
-                        </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                        </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
-                        </span>
-                     </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
-                     </div><br>
-                     <div class="job_footer">
-                        <div class="row" style="border-top: 1px solid #ddd;">
-                           <div class="col-sm-5 button">
-                              <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="row">
                </div><br>
             </div>
-            <div class="Newest_Job" *ngIf="Active_Tab === 'Full_Time'">
+            <div class="grid" *ngIf="Active_Tab === 'grid'">
                <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
+                  <div class="col-sm-6 Job" *ngFor="let item of results; let i=index">
+                     <div class="Header">
+                        <span class="Img_Section">
+                           <img src="../../../../assets/Images/{{item.user_image}}">
                         </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
+                        <span class="Name_Section">
+                           <p class="Name"> {{item.name}} </p>
+                           <p class="Location"><span><i class="material-icons">location_on</i></span> {{item.location}} </p>
                         </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
+                        <span class="Price_Section">
+                           <p class="Price">{{item.price}}</p>
+                           <p><button class="button">{{item.job_Type}}</button></p>
                         </span>
                      </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                     <div class="Content_Section">
+                        <h4>{{item.designation}}</h4>
+                        <p>{{item.description}}</p>
                      </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
+                     <div class="Button_Section">
+                        <button class="ux" *ngFor="let skill of item.skills"><span>{{skill.skill}}</span></button>
                      </div><br>
-                     <div class="job_footer">
+                     <div class="Job_Footer">
                         <div class="row" style="border-top: 1px solid #ddd;">
                            <div class="col-sm-5 button">
                               <p (click)="JobApply()">APPLY NOW</p>
                            </div>
                            <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
+                              <a [routerLink]="['/Job_View', item.job_id]"><P>VIEW JOB </P></a>
                            </div> 
                            <div class="col-sm-2 ">
                               <!-- <button mat-mini-fab>
@@ -362,354 +212,14 @@
                         </div>
                      </div>
                   </div>
-               </div><br>
-               <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
-                        </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                        </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
-                        </span>
-                     </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
-                     </div><br>
-                     <div class="job_footer">
-                        <div class="row" style="border-top: 1px solid #ddd;">
-                           <div class="col-sm-5 button">
-                              <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
-                        </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                        </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
-                        </span>
-                     </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
-                     </div><br>
-                     <div class="job_footer">
-                        <div class="row" style="border-top: 1px solid #ddd;">
-                           <div class="col-sm-5 button">
-                              <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
-                        </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                        </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
-                        </span>
-                     </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
-                     </div><br>
-                     <div class="job_footer">
-                        <div class="row" style="border-top: 1px solid #ddd;">
-                           <div class="col-sm-5 button">
-                              <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="row">
-               </div><br>
-            </div>
-            <div class="Newest_Job" *ngIf="Active_Tab === 'Part_Time'">
-               <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
-                        </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                        </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
-                        </span>
-                     </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
-                     </div><br>
-                     <div class="job_footer">
-                        <div class="row" style="border-top: 1px solid #ddd;">
-                           <div class="col-sm-5 button">
-                              <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
-                        </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                        </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
-                        </span>
-                     </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
-                     </div><br>
-                     <div class="job_footer">
-                        <div class="row" style="border-top: 1px solid #ddd;">
-                           <div class="col-sm-5 button">
-                              <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
-                        </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                        </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
-                        </span>
-                     </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
-                     </div><br>
-                     <div class="job_footer">
-                        <div class="row" style="border-top: 1px solid #ddd;">
-                           <div class="col-sm-5 button">
-                              <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="row">
-                  <div class="col-sm-12 job">
-                     <div class="header">
-                        <span class="img_section">
-                           <img src="../../../../assets/Images/employee.jpg">
-                        </span>
-                        <span class="name_section">
-                           <p class="name">John Doe </p>
-                           <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                        </span>
-                        <span class="price_section">
-                           <p class="Price">$599</p>
-                           <p><button class="button">Full Time</button></p>
-                        </span>
-                     </div><br>
-                     <div class="content_section">
-                        <h4>UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                     </div><br>
-                     <div class="button_section">
-                        <!-- <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button>
-                        <button mat-raised-button color="primary">Primary</button> -->
-                        <button class="ux"><span>UX</span></button>
-                        <button class="ui"><span>UI</span></button>
-                        <button class="photoshop"><span>Photoshop</span></button>
-                        <button class="photoshop"><span>Illustrator</span></button>
-                        <button class="photoshop"><span>CorelDraw</span></button>
-                        <button class="photoshop"><span>Graphic Design</span></button>
-                     </div><br>
-                     <div class="job_footer">
-                        <div class="row" style="border-top: 1px solid #ddd;">
-                           <div class="col-sm-5 button">
-                              <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div><br>
-               <div class="row">
                </div><br>
             </div>
          </div>
       </div>
+   </form>
    </div>
 </div>
+<!-- Footer -->
 <div class="footer">
    <div class="email_section">
       <div class="news">
@@ -722,10 +232,6 @@
       </div>
    </div>
    <div class="link_section">
-      <span class="company">
-         <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </span>
       <span class="about">
          <ul>
             <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>

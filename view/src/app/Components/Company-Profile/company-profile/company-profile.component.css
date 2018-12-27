@@ -13,9 +13,9 @@
 .header_two .Menu_List1{
    margin-right: 35px;
    color: #464242;
-   font-size: 16px;
-   font-weight: 500;
-   font-family: serif;
+   font-size: 15px;
+   font-weight: 600;
+   font-family: roboto, sans-serif;
 }
 .header_two .search i{
    margin-top:5px;
@@ -23,36 +23,7 @@
    font-weight: 500;
    color: #FF4500;
 }
-.header_two .post{
-   margin-left: 30px;
-}
-.header_two .post button{
-   background-color: #FF4500;
-   border: 1px solid #ff4500;
-   padding: 5px 15px;
-   border-radius: 3px;
-   font-size: 11px;
-   font-weight: 700;
-   color: #fff;
-   outline: none;
-   cursor: pointer;
-   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-.header_two .task{
-   margin-left: 20px;
-}
-.header_two .task button{
-   background-color: #39383D;
-   border: 1px solid #39383D;
-   padding: 5px 15px;
-   border-radius: 3px;
-   font-size: 11px;
-   font-weight: 700;
-   color: #fff;
-   outline: none;
-   cursor: pointer;
-   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-}
+/* Header Three */
 .header_three{
    width:100%;
    height:50px;
@@ -88,6 +59,7 @@
    margin-top: 16px;
    cursor: pointer;
 }
+/* Filters */
 .Filters .filters .header{
    border-bottom: 1px solid #ded9d9;
    margin-bottom: 30px;
@@ -95,7 +67,7 @@
 }
 .Filters .filters .header img{
    width: 100px;
-   margin-left: 115px;
+   margin-left: 75px;
 }
 .Filters .filters .header p{
    font-size: 17px;
@@ -103,7 +75,8 @@
    color: #212020;
    margin-top: 10px;
    padding: 0px 20px;
-   margin-left: 101px;
+   margin-left: 50px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .header .contact{
    background-color: #FF4500;
@@ -114,7 +87,9 @@
    font-weight: 700;
    color: #fff;
    outline: none;
-   margin-left: 112px;
+   margin-left: 73px;
+   box-shadow: 2px 2px 3px #989595;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Websites p{
    font-size: 15px;
@@ -122,16 +97,18 @@
    color: #212020;
    margin-top: 13px;
    padding:0px 5px;
+   margin-left: 4px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Websites .websites{
    list-style-type: none;
-   margin-left: -37px;
 }
 .Filters .filters .Websites .websites li{
    font-size: 14px;
    font-weight: 500;
    color: #a0a0a0;
    margin-bottom: 10px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Websites .websites li i{
    font-size: 14px;
@@ -153,6 +130,7 @@
    margin-top: 13px;
    padding:0px 5px;
    margin-bottom:5px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .profile_completeness{
    border-bottom: 1px solid #ded9d9;
@@ -168,15 +146,14 @@
    color: #212020;
    margin-top: 13px;
    padding: 0px 5px 19px 5px;
-   margin-bottom: 0px
+   margin-bottom: 0px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .rating{
-   border-bottom: 1px solid #ded9d9;
-   width: 114%;
+   width: 100%;
    margin-top: -35px;
-   padding: 12px 116px;
-   float: right;
-   margin-right: -22px;
+   padding: 15px 51px;
+   float: right;;
 }
 .Filters .filters .rating .stars{
    margin-top: 17px;
@@ -190,6 +167,7 @@
    color: #212020;
    margin-top: 13px;
    padding:0px 5px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Location p span{
    font-size: 15px;
@@ -197,6 +175,7 @@
    color: #c1b8b8;
    float: right;
    padding:0px 25px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Location p i{
    font-size: 16px;
@@ -204,8 +183,8 @@
    padding: 0px 5px;
 }
 .Filters .filters .Location .location img{
-   width: 345px;
-   height: 180px;
+   width: 220px;
+   height: 120px
 }
 .Filters .filters .Location .location .left_content p{
    font-size: 15px;
@@ -244,7 +223,7 @@
    border-radius: 50px;
    width: 245px;
    height: 35px;
-   margin-left: 20px;
+   margin-left: 6px;
    padding: 5px 45px;
    font-size: 16px;
    font-weight: 500;
@@ -256,7 +235,7 @@
    border-radius: 50px;
    width: 245px;
    height: 35px;
-   margin-left: 20px;
+   margin-left: 6px;
    padding: 5px 45px;
    font-size: 16px;
    font-weight: 500;
@@ -268,28 +247,28 @@
    border-radius: 50px;
    width: 245px;
    height: 35px;
-   margin-left: 20px;
+   margin-left: 6px;
    padding: 5px 45px;
    font-size: 16px;
    font-weight: 500;
    color: #948c8c;
 }
 .Filters .filters .Social_Account .facebook_icon {
-   padding: 0px 14px;
+   padding: 0px 1px;
 }
 .Filters .filters .Social_Account .facebook_icon img{
    width: 50px;
    height: 50px;
 }
 .Filters .filters .Social_Account .twitter_icon {
-   padding: 0px 14px;
+   padding: 0px 1px;
 }
 .Filters .filters .Social_Account .twitter_icon img{
    width: 50px;
    height: 50px;
 }
 .Filters .filters .Social_Account .linkedin_icon {
-   padding: 0px 16px;
+   padding: 0px 1px;
 }
 .Filters .filters .Social_Account .linkedin_icon img{
    width: 45px;
@@ -353,6 +332,7 @@
    display: flex;
    width: 100%;
    list-style-type:none;
+   margin-left:30px;
 }
 .Tabs .Tab{
    width: 14%;
@@ -362,6 +342,7 @@
    font-size: 13px;
    font-weight: 600;
    letter-spacing: 0.4px;
+   font-family: roboto,sans-serif;
 }
 .Tabs .Tab:hover{
    background-color:  #ff4500;
@@ -411,21 +392,25 @@
    outline: none;
    cursor: pointer;
    margin-left: 20px;
+   box-shadow: 2px 2px 3px #989595;
+   font-family: roboto,sans-serif;
 }
 .Content_Section {
    border: 1px solid #e4d8d8;
    padding: 10px 35px;
+   margin-left:30px;
 }
 .Content_Section .Content_Header{
    border-bottom: 1px solid #e4dfdf;
    margin-left: -35px;
-   width: 111%;
+   width: 110%;
 }
 .Content_Section .Content_Header p{
    margin-left: 35px;
    font-size: 16px;
    font-weight: 600;
    color: #525252;
+   font-family: roboto,sans-serif;
 }
 .Content_Section .Content{
    font-size: 14px;
@@ -442,11 +427,13 @@ a{
 .Skills_Section {
    border: 1px solid #e4d8d8;
    padding: 10px 35px;
+   margin-left:30px;
 }
 .Skills_Section .Skills_Header{
    border-bottom: 1px solid #e4dfdf;
    margin-left: -35px;
-   width: 111%;
+   width: 110%;
+   font-family: roboto,sans-serif;
 }
 .Skills_Section .Skills_Header p{
    margin-left: 35px;
@@ -456,6 +443,7 @@ a{
 }
 .Skills_Section .buttons{
    margin-top:10px;
+   display: inline-flex;
 }
 .ux{
    margin-right: 10px;
@@ -469,39 +457,19 @@ a{
    font-weight: 500;
    color: #8a8585;
 }
-.ui{
-   margin-right: 10px;
-   outline: none;
-   padding: 3px 18px;
-   border-radius: 15px;
-   border: none;
+.ux:hover{
+   box-shadow: 2px 2px 4px #ababab;
 }
-.ui span{
-   font-size: 13px;
-   font-weight: 500;
-   color: #8a8585;
-}
-.photoshop{
-   margin-right: 10px;
-   outline: none;
-   padding: 3px 18px;
-   border-radius: 15px;
-   border: none;
-}
-.photoshop span{
-   font-size: 13px;
-   font-weight: 500;
-   color: #8a8585;
-}
-
 .Language_Section {
    border: 1px solid #e4d8d8;
    padding: 10px 35px;
+   margin-left:30px;
 }
 .Language_Section .Language_Header{
    border-bottom: 1px solid #e4dfdf;
    margin-left: -35px;
-   width: 111%;
+   width: 110%;
+   font-family: roboto,sans-serif;
 }
 .Language_Section .Language_Header p{
    margin-left: 35px;
@@ -524,6 +492,9 @@ a{
    outline: none;
    margin-bottom: 3px;
 }
+.english:hover{
+   box-shadow: 2px 2px 4px #ababab;
+}
 .punjabi  {
    background-color: #FF4500;
    border: 1px solid #ff4500;
@@ -535,6 +506,9 @@ a{
    outline: none;
    margin-bottom: 3px;
    margin-left: 20px;
+}
+.punjabi:hover{
+   box-shadow: 2px 2px 4px #ababab;
 }
 .hindi  {
    background-color: #FF4500;
@@ -548,13 +522,16 @@ a{
    margin-bottom: 3px;
    margin-left: 20px;
 }
+.hindi:hover{
+   box-shadow: 2px 2px 4px #ababab;
+}
 
-
+/* Footer */
 .footer{
    width: 100%;
    height: 400px;
    border: 1px solid #242424;
-   background-color: #242424
+   background-color: #242424;
 }
 .email_section{
    display: inline-flex;
@@ -572,11 +549,13 @@ a{
    font-weight: 500;
    margin-top: 25px;
    margin-bottom: 0px;
+   font-family: roboto, sans-serif;
 }
 .news .news_content{
    color: #9c9898;
    font-size: 16px;
    margin-bottom: 0px;
+   font-family: roboto, sans-serif;
 }
 .email{
    width: 50%;
@@ -589,17 +568,23 @@ a{
    border-radius: 2px;
    border: 1px solid #fff;
    padding: 5px 20px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #6d6666;
+   font-family: roboto, sans-serif;
 }
 .email button{
    height: 35px;
    background-color: #ff430b;
    border: 1px solid #ff430b;
-   padding: 8px 10px;
+   padding: 5px 10px;
    border-radius: 3px;
    color: #fff;
    font-size: 13px;
    font-weight: 500;
-   margin-left: -81px
+   margin-left: -81px;
+   font-family: roboto, sans-serif;
+   outline:none;
 }
 .link_section{
    width: 100%;
@@ -607,15 +592,9 @@ a{
    border-bottom: 1px solid #403f3f;
    padding: 15px;
 }
-.company p{
-   width: 25%;
-   color: #9c9898;
-   font-size: 13px;
-   font-weight: 500;
-   margin-left: 120px;
-}
 .about{
-   width: 25%;
+   width: 30%;
+   margin-left: 125px;
 }
 .about ul{
    margin-top: 60px;
@@ -630,7 +609,7 @@ a{
    margin-left: 10px;
 }
 .for_companies{
-   width: 25%;
+   width: 30%;
 }
 .for_companies ul{
    margin-top: 60px;
@@ -645,7 +624,7 @@ a{
    margin-left: 10px;
 }
 .for_candidates{
-   width: 25%;
+   width: 30%;
 }
 .for_candidates ul{
    margin-top: 60px;
@@ -671,7 +650,7 @@ a{
    margin-top: 20px;
    margin-left: 75px;
    font-size: 13px;
-   font-weight: 500
+   font-weight: 500;
 }
 .links{
    width:50%;
@@ -686,5 +665,6 @@ a{
    color: #9c9898;
    font-size: 13px;
    margin-right: 30px;
+   font-family: roboto, sans-serif;
 }
 

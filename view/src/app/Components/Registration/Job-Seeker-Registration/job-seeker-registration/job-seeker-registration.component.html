@@ -6,7 +6,7 @@
       <a [routerLink]="['/landing_page']" ><li class="Menu_List1 ">Home</li></a>
       <a [routerLink]="['/Job_Search']"><li class="Menu_List1">Find Jobs</li></a>
       <!-- <li class="Menu_List1">Find Work</li> -->
-      <a [routerLink]="['/Company_Profile']"><li class="Menu_List1 ">Find Companies</li></a>
+      <a [routerLink]="['/Company_List']"><li class="Menu_List1 " [routerLinkActive]="'active'" >Find Companies</li></a>
       <!-- <li class="Menu_List1">Find FreeLancers</li>
       <li class="Menu_List1">pages</li> -->
       <span class="search"><i class="material-icons">search</i></span>
@@ -15,6 +15,7 @@
       <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a>
    </ul>
 </div>
+<!-- Header Three -->
 <div class="header_three">
    <div class="left_content">
       <p>Update Profile</p>
@@ -23,120 +24,206 @@
       <p><a [routerLink]="['/landing_page']"><span>Home</span></a>/Update Profile</p>
    </div>
 </div><br><br>
+<!-- Registration Details -->
 <div class="Registration_Details">
    <div class="container">
       <div class="row">
          <div class="col-sm-12 Profile_details">
             <h4>Update Profile</h4>
-            <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:3%"></div><br><br>
+            <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:3%"></div><br>
             <!-- <p>Profile</p>
             <img src="../../../../assets/Images/profile.png"><br><br>
             <div>
                <button class="upload_button">Upload Profile</button>
             </div><br> -->
-            <div class="form_details">
-               <form>
+            <form [formGroup]="Form">
+               <div class="form_details">
                   <div class="row">
-                     <div class="col-sm-12">
+                     <div class="col-sm-12" [ngClass]="{'Form_Err': !Form.controls['Name'].pristine && Form.controls['Name'].errors, 'Form_Success': Form.controls['Name'].valid && !Form.controls['Name'].pristine }">
                         <label>Name</label><br>
-                        <input type="text" placeholder="Enter Your Name"><br>
+                        <input type="text" formControlName="Name" placeholder="Enter Your Name"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Name'].errors && !Form.controls['Name'].pristine">
+                           <span *ngIf="Form.controls['Name'].errors.required">Name is required</span>
+                        </p>  
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Date_Of_Birth'].pristine && Form.controls['Date_Of_Birth'].errors, 'Form_Success': Form.controls['Date_Of_Birth'].valid && !Form.controls['Date_Of_Birth'].pristine }">
                         <label>D.O.B</label><br>
-                        <input type="text" placeholder="Enter Your Date Of Birth">
+                        <input matInput [matDatepicker]="DatePicker1" [min]="minDate" (click)="DatePicker1.open()" formControlName="Date_Of_Birth" placeholder="Date Of Birth">
+                        <mat-datepicker #DatePicker1></mat-datepicker>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Date_Of_Birth'].errors && !Form.controls['Date_Of_Birth'].pristine">
+                           <span *ngIf="Form.controls['Date_Of_Birth'].errors.required">Date Of Birth is required</span>
+                        </p>  
                      </div>
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['FatherName'].pristine && Form.controls['FatherName'].errors, 'Form_Success': Form.controls['FatherName'].valid && !Form.controls['FatherName'].pristine }">
                         <label>Father's Name</label><br>
-                        <input type="text" placeholder="Enter Your Father's Name"><br>
+                        <input type="text" formControlName="FatherName" placeholder="Enter Your Father's Name"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['FatherName'].errors && !Form.controls['FatherName'].pristine">
+                           <span *ngIf="Form.controls['FatherName'].errors.required">Father's Name is required</span>
+                        </p>  
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['MotherName'].pristine && Form.controls['MotherName'].errors, 'Form_Success': Form.controls['MotherName'].valid && !Form.controls['MotherName'].pristine }">
                         <label>Mother's Name</label><br>
-                        <input type="text" placeholder="Enter Your Mother's Name"><br>
+                        <input type="text" formControlName="MotherName" placeholder="Enter Your Mother's Name"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['MotherName'].errors && !Form.controls['MotherName'].pristine">
+                           <span *ngIf="Form.controls['MotherName'].errors.required">Mother's Name is required</span>
+                        </p>  
                      </div>
                      <div class="col-sm-6">
                         <label>Alternate Email</label><br>
-                        <input type="text" placeholder="Enter Your Alternate Email"><br>
+                        <input type="text" formControlName="AlternateMail" placeholder="Enter Your Alternate Email"><br>
                      </div>
                   </div>
                   <div class="row">
                      <div class="col-sm-6">
                         <label> Alternate Contact Details</label><br>
-                        <input type="text" placeholder="Confirm Your Alternate Contact Details"><br>
+                        <input type="text" formControlName="AlternateContact" placeholder="Confirm Your Alternate Contact Details"><br>
                      </div>
                      <div class="col-sm-6">
-                        <label> Address</label><br>
-                        <textarea rows="3" cols="30" placeholder="Address"></textarea><br>
+                        <label>City</label><br>
+                        <ng-select class="NgSelect" 
+                           [items]="_City" 
+                           [searchable]="true" 
+                           formControlName="City"
+                           placeholder="City">
+                        </ng-select> 
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-top: 10px" *ngIf="Form.controls['City'].errors && !Form.controls['City'].pristine">
+                           <span *ngIf="Form.controls['City'].errors.required">City is required</span>
+                        </p>  
+                     </div>
+                     <div class="col-sm-6">
+                        <label>State</label><br>
+                        <ng-select class="NgSelect" 
+                           [items]="_State" 
+                           [searchable]="true" 
+                           formControlName="State"
+                           placeholder="State">
+                        </ng-select> 
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-top: 10px" *ngIf="Form.controls['State'].errors && !Form.controls['State'].pristine">
+                           <span *ngIf="Form.controls['State'].errors.required">State is required</span>
+                        </p>  
+                     </div>
+                     <div class="col-sm-6">
+                        <label>Country</label><br>
+                        <ng-select class="NgSelect" 
+                           [items]="_Country" 
+                           [searchable]="true" 
+                           formControlName="Country"
+                           placeholder="Country">
+                        </ng-select> 
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-top: 10px" *ngIf="Form.controls['Country'].errors && !Form.controls['Country'].pristine">
+                           <span *ngIf="Form.controls['Country'].errors.required">Country is required</span>
+                        </p>  
                      </div>
                   </div><br><br>
                   <h4>Education Details</h4>
-                  <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:3%"></div><br><br>
+                  <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:3%"></div><br>
                   <div class="row">
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Course'].pristine && Form.controls['Course'].errors, 'Form_Success': Form.controls['Course'].valid && !Form.controls['Course'].pristine }">
                         <label> Course/Grade</label><br>
-                        <input type="text" placeholder="Course/Grade"><br>
+                        <input type="text" formControlName="Course" placeholder="Course/Grade"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Course'].errors && !Form.controls['Course'].pristine">
+                           <span *ngIf="Form.controls['Course'].errors.required">Course is required</span>
+                        </p>  
                      </div>
-                     <div class="col-sm-6">
+                     <div class="col-sm-6"  [ngClass]="{'Form_Err': !Form.controls['Institution'].pristine && Form.controls['Institution'].errors, 'Form_Success': Form.controls['Institution'].valid && !Form.controls['Institution'].pristine }">
                         <label> Name Of the Institution</label><br>
-                        <input type="text" placeholder="Enter Your Institution"><br>
+                        <input type="text" formControlName="Institution" placeholder="Enter Your Institution"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Institution'].errors && !Form.controls['Institution'].pristine">
+                           <span *ngIf="Form.controls['Institution'].errors.required">Institution is required</span>
+                        </p>  
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['University'].pristine && Form.controls['University'].errors, 'Form_Success': Form.controls['University'].valid && !Form.controls['University'].pristine }">
                         <label> University/Board</label><br>
-                        <input type="text" placeholder="Course/Grade"><br>
+                        <input type="text" formControlName="University" placeholder="Course/Grade"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['University'].errors && !Form.controls['University'].pristine">
+                           <span *ngIf="Form.controls['University'].errors.required">University is required</span>
+                        </p>  
                      </div>
                   </div>
                   <div class="row">
                      <div class="col-sm-12 Experience">
                         <span style="font-size: 15px;font-weight: 600;color: #4a4747;">Do You Have Experience</span>
                         <label class="switch">
-                           <input type="checkbox" checked>
+                           <input type="checkbox" checked formControlName="Experience">
                            <span class="slider round"></span>
                         </label>
+                        <span class="experience"><i class="material-icons" (click)="addItem()">add_circle</i></span><br><br>
                      </div>
                   </div><br>
-                     <div class="row">
-                        <div class="col-sm-6">
-                           <label> Name Of The Company</label><br>
-                           <input type="text" placeholder="Enter Your Company Name"><br>
+                  <ng-container formArrayName="items" *ngIf="Form.controls['Experience'].value">
+                        <div class="row"  *ngFor="let item of Form.controls['items']['controls']; let i = index;" >
+                           <ng-container [formGroupName]="i">
+                              <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['CompanyName'].pristine && Form.controls['CompanyName'].errors, 'Form_Success': Form.controls['CompanyName'].valid && !Form.controls['CompanyName'].pristine }">
+                                 <label> Name Of The Company</label><br>
+                                 <input type="text" formControlName="CompanyName" placeholder="Enter Your Company Name"><br>
+                                 <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['CompanyName'].errors && !Form.controls['CompanyName'].pristine">
+                                    <span *ngIf="Form.controls['CompanyName'].errors.required">CompanyName is required</span>
+                                 </p>  
+                              </div>
+                              <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Designation'].pristine && Form.controls['Designation'].errors, 'Form_Success': Form.controls['Designation'].valid && !Form.controls['Designation'].pristine }">
+                                 <label> Designation</label><br>
+                                 <input type="text" formControlName="Designation" placeholder="Designation"><br>
+                                 <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Designation'].errors && !Form.controls['Designation'].pristine">
+                                    <span *ngIf="Form.controls['Designation'].errors.required">Designation is required</span>
+                                 </p>  
+                              </div>
+                              <div class="col-sm-6">
+                                 <label> Responsibilities</label><br>
+                                 <input type="text" formControlName="Responsibilities" placeholder="Responsibilities"><br>
+                              </div>
+                              <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['From'].pristine && Form.controls['From'].errors, 'Form_Success': Form.controls['From'].valid && !Form.controls['From'].pristine }">
+                                 <label> From</label><br>
+                                 <input type="text" formControlName="From" placeholder="From"><br>
+                                 <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['From'].errors && !Form.controls['From'].pristine">
+                                    <span *ngIf="Form.controls['From'].errors.required">From is required</span>
+                                 </p>  
+                              </div>
+                              <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['To'].pristine && Form.controls['To'].errors, 'Form_Success': Form.controls['To'].valid && !Form.controls['To'].pristine }">
+                                 <label> To</label><br>
+                                 <input type="text" formControlName="To" placeholder="To"><br>
+                                 <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['To'].errors && !Form.controls['To'].pristine">
+                                    <span *ngIf="Form.controls['To'].errors.required">To is required</span>
+                                 </p>  
+                              </div>
+                              <div class="col-sm-6">
+                                 <button (click)="Delete(i)" *ngIf="Form.controls['items']['controls'].length > 1" class="Bg_Danger" mat-mini-fab color="primary" >
+                                    <i class="material-icons">delete</i>
+                                 </button> 
+                              </div>
+                           </ng-container>
                         </div>
-                        <div class="col-sm-6">
-                           <label> Designation</label><br>
-                           <input type="text" placeholder="Designation"><br>
-                        </div>
-                        <div class="col-sm-6">
-                           <label> Responsibilities</label><br>
-                           <input type="text" placeholder="Responsibilities"><br>
-                        </div>
-                        <div class="col-sm-6">
-                           <label> From</label><br>
-                           <input type="text" placeholder="From"><br>
-                        </div>
-                        <div class="col-sm-6">
-                           <label> To</label><br>
-                           <input type="text" placeholder="To"><br>
-                        </div>
-                     </div>
+                  </ng-container>
                   <div class="row">
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Languages'].pristine && Form.controls['Languages'].errors, 'Form_Success': Form.controls['Languages'].valid && !Form.controls['Languages'].pristine }">
                         <label> Languages Known</label><br>
-                        <input type="text" placeholder="Languages Known"><br>
+                        <input type="text" formControlName="Languages" placeholder="Languages Known"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Languages'].errors && !Form.controls['Languages'].pristine">
+                           <span *ngIf="Form.controls['Languages'].errors.required">Languages is required</span>
+                        </p>  
                      </div>
                   </div><br><br>
                   <h4>Certification Courses</h4>
-                  <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:3%"></div><br><br>
+                  <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:3%"></div><br>
                   <div class="row">
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Course_Name'].pristine && Form.controls['Course_Name'].errors, 'Form_Success': Form.controls['Course_Name'].valid && !Form.controls['Course_Name'].pristine }">
                         <label> Name Of The Course</label><br>
-                        <input type="text" placeholder="Enter Your Course"><br>
+                        <input type="text" formControlName="Course_Name" placeholder="Enter Your Course"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Course_Name'].errors && !Form.controls['Course_Name'].pristine">
+                           <span *ngIf="Form.controls['Course_Name'].errors.required">Course Name is required</span>
+                        </p>  
                      </div>
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Institution_Name'].pristine && Form.controls['Institution_Name'].errors, 'Form_Success': Form.controls['Institution_Name'].valid && !Form.controls['Institution_Name'].pristine }">
                         <label> Institution</label><br>
-                        <input type="text" placeholder="Institution"><br>
+                        <input type="text" formControlName="Institution_Name" placeholder="Institution"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Institution_Name'].errors && !Form.controls['Institution_Name'].pristine">
+                           <span *ngIf="Form.controls['Institution_Name'].errors.required">Institution Name is required</span>
+                        </p>  
                      </div>
                      <div class="col-sm-6">
                         <label> Duration From</label><br>
@@ -148,24 +235,21 @@
                      </div>
                      <div class="col-sm-6">
                         <label> Status</label><br>
-                        <select>
-                           <option>Select Status</option>
-                           <option>Pursuing</option>
-                           <option>Completed</option>
-                        </select>
+                        <ng-select class="NgSelect" 
+                           [items]="_Status" 
+                           [searchable]="true" 
+                           formControlName="Status"
+                           placeholder="Status">
+                        </ng-select> 
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-top: 10px" *ngIf="Form.controls['Status'].errors && !Form.controls['Status'].pristine">
+                           <span  *ngIf="Form.controls['Status'].errors.required"> Status is required</span>
+                        </p> 
                      </div>
                   </div><br>
                   <div class="row">
                      <div class="col-sm-12">
                         <label> Skills</label><br>
-                        <select>
-                           <option>Select Skills</option>
-                           <option>c</option>
-                           <option>c++</option>
-                           <option>Java</option>
-                           <option>Designing</option>
-                           <option>Photoshop</option>
-                        </select>
+                        <input type="text" placeholder="eg.c, c++, Photoshop, etc...."><br>
                      </div>
                   </div><br>
                   <div class="row">
@@ -175,37 +259,34 @@
                      </div>
                   </div><br>
                   <div class="row">
-                     <div class="col-sm-6">
+                     <div class="col-sm-6 Upload_Files">
                         <label> Resume Upload</label><br>
                         <input type="file" style="height:45px;"><br>
                      </div>
-                     <div class="col-sm-6">
+                     <div class="col-sm-6 Upload_Files">
                         <label> Photo Upload</label><br>
                         <input type="file" style="height:45px;"><br>
                      </div>
                   </div><br>
                   <div class="row">
-                     <div class="col-sm-12">
-                        <label> Prefered Location</label><br>
-                        <input type="text" placeholder="Prefered Location"><br>
+                     <div class="col-sm-12" [ngClass]="{'Form_Err': !Form.controls['Preferred_Location'].pristine && Form.controls['Preferred_Location'].errors, 'Form_Success': Form.controls['Preferred_Location'].valid && !Form.controls['Preferred_Location'].pristine }">
+                        <label> Preferred Location</label><br>
+                        <input type="text" formControlName="Preferred_Location" placeholder="Preferred Location"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Preferred_Location'].errors && !Form.controls['Preferred_Location'].pristine">
+                           <span *ngIf="Form.controls['Preferred_Location'].errors.required">Preferred_Location is required</span>
+                        </p>  
                      </div>
-                  </div>
-               </form>
-            </div><br>
-            <div class="Registration_Button">
-               <a [routerLink]="['/landing_page']" ><button class="registration_button">UPDATE</button></a>
-            </div><br><br>
+                  </div><br>
+                  <div class="Registration_Button">
+                     <a (click)="update()" ><button class="registration_button">UPDATE</button></a>
+                  </div><br><br>
+               </div>
+            </form>
          </div>
-         <!-- <div class="col-sm-4 FAQ">
-            <h4>FAQ</h4><br>
-            <P CLASS="Que">01.Lorem ipsum dolor sit amet consectetur adipisicing elit?</P>
-            <p class="Ans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea quaerat expedita nemo fugit? Adipisci fuga, soluta eveniet debitis rerum atque facere, maiores numquam quidem eius quae vel provident? Porro.</p><br>
-            <P CLASS="Que">02.Lorem ipsum dolor sit amet consectetur adipisicing elit?</P>
-            <p class="Ans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea quaerat expedita nemo fugit? Adipisci fuga, soluta eveniet debitis rerum atque facere, maiores numquam quidem eius quae vel provident? Porro.</p><br>
-         </div> -->
       </div>
    </div>
 </div><br><br>
+<!-- Footer -->
 <div class="footer">
    <div class="email_section">
       <div class="news">
@@ -218,10 +299,6 @@
       </div>
    </div>
    <div class="link_section">
-      <span class="company">
-         <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </span>
       <span class="about">
          <ul>
             <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>

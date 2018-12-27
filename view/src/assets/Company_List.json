@@ -1,0 +1,37 @@
+[  {
+      "Company_Id" : 1,
+      "Company_Image" : "company.png",
+      "Company_Name" : "Aashi Softwares",
+      "Company_Website" : "www.aashisoftwares.com",
+      "About": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Location" : "Coimbatore",
+      "skills": [{ "skill" : "UX" }, { "skill" : "UI" }, {"skill" : "Photoshop"}, { "skill" : "CorelDraw" }, { "skill" : "Angular" }]
+   },
+   {
+      "Company_Id" : 2,
+      "Company_Image" : "company.png",
+      "Company_Name" : "Aashi Technologies",
+      "Company_Website" : "www.aashitechno.com",
+      "About": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Location" : "Coimbatore",
+      "skills": [{ "skill" : "UX" }, { "skill" : "UI" }, {"skill" : "Photoshop"}, { "skill" : "CorelDraw" }, { "skill" : "Angular" }]
+   },
+   {
+      "Company_Id" : 3,
+      "Company_Image" : "company.png",
+      "Company_Name" : "Astute Solutions",
+      "Company_Website" : "www.astutesolutions.com",
+      "About": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Location" : "Bangalore",
+      "skills": [{ "skill" : "UX" }, { "skill" : "UI" }, {"skill" : "Photoshop"}, { "skill" : "CorelDraw" }, { "skill" : "Angular" }]
+   },
+   {
+      "Company_Id" : 4,
+      "Company_Image" : "company.png",
+      "Company_Name" : "Praistma Technologies",
+      "Company_Website" : "www.praistmatechnologies.com",
+      "About": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elit",
+      "Location" : "Bangalore",
+      "skills": [{ "skill" : "UX" }, { "skill" : "UI" }, {"skill" : "Photoshop"}, { "skill" : "CorelDraw" }]
+   }
+]

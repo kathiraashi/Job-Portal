@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
-
-@import './assets/Over-Write-Css/material-overwrite.css';
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 @import '../node_modules/primeng/resources/themes/omega/theme.css';
+@import '../node_modules/primeng/resources/primeng.min.css';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+
+
+@import './assets/Over-Write-Css/material-overwrite.css';
 @import './assets/Over-Write-Css/ngx-bootstrap-overwrite.css';
 @import './assets/Over-Write-Css/ng-select-overwrite.css';
+@import './assets/Over-Write-Css/Primeng-Overwrite.css';

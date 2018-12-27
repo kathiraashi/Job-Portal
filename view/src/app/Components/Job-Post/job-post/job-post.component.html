@@ -6,7 +6,7 @@
       <a [routerLink]="['/landing_page']" ><li class="Menu_List1 ">Home</li></a>
       <a [routerLink]="['/Job_Search']" ><li class="Menu_List1">Find Jobs</li></a>
       <!-- <li class="Menu_List1">Find Work</li> -->
-      <a [routerLink]="['/Company_Profile']"><li class="Menu_List1 ">Find Companies</li></a>
+      <a [routerLink]="['/Company_List']"><li class="Menu_List1 " [routerLinkActive]="'active'" >Find Companies</li></a>
       <!-- <li class="Menu_List1">Find FreeLancers</li>
       <li class="Menu_List1">pages</li> -->
       <span class="search"><i class="material-icons">search</i></span>
@@ -15,6 +15,7 @@
       <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a> -->
    </ul>
 </div>
+<!-- Header Three -->
 <div class="header_three">
    <div class="left_content">
       <p>Post a Job</p>
@@ -23,6 +24,7 @@
       <p><a [routerLink]="['/landing_page']"><span>Home</span></a>/Post a Job</p>
    </div>
 </div><br><br>
+<!-- Registration Details -->
 <div class="Registration_Details">
    <div class="container">
       <div class="row">
@@ -39,50 +41,74 @@
                   <div class="row">
                      <div class="col-sm-6 form_fields">
                         <label>Job Type</label><br>
-                       <select>
+                       <!-- <select>
                           <option>Select an Type</option>
                           <option>Type-1</option>
                           <option>Type-2</option>
                           <option>Type-3</option>
-                       </select>
+                       </select> -->
+                       <ng-select class="NgSelect" 
+                           [items]="_Job_Type" 
+                           [searchable]="true" 
+                           formControlName="Job_Type"
+                           placeholder="Job Type">
+                        </ng-select> 
                      </div>
                      <div class="col-sm-6 form_fields">
                         <label>Category</label><br>
-                        <select>
+                        <!-- <select>
                            <option>Select an Category</option>
                            <option>Category-1</option>
                            <option>Category-2</option>
                            <option>Category-3</option>
-                        </select>
+                        </select> -->
+                        <ng-select class="NgSelect" 
+                           [items]="_Category" 
+                           [searchable]="true" 
+                           formControlName="Category"
+                           placeholder="Category">
+                        </ng-select> 
                      </div>
                   </div><br>
                   <div class="row">
                      <div class="col-sm-6">
                         <label> Availability</label><br>
-                        <select>
+                        <!-- <select>
                            <option>I am not sure</option>
                            <option>Category-1</option>
                            <option>Category-2</option>
                            <option>Category-3</option>
-                        </select>
+                        </select> -->
+                        <ng-select class="NgSelect" 
+                           [items]="_Availability" 
+                           [searchable]="true" 
+                           formControlName="Availability"
+                           placeholder="Availability">
+                        </ng-select> 
                      </div>
                      <div class="col-sm-6">
                         <label> Experience Level</label><br>
-                        <select>
+                        <!-- <select>
                            <option>Select one and more Experience level</option>
                            <option>Category-1</option>
                            <option>Category-2</option>
                            <option>Category-3</option>
-                        </select>
+                        </select> -->
+                        <ng-select class="NgSelect" 
+                           [items]="_Experience_Level" 
+                           [searchable]="true" 
+                           formControlName="Experience_Level"
+                           placeholder="Experience Level">
+                        </ng-select> 
                      </div>
                   </div><br>
                   <div class="row">
                      <div class="col-sm-6">
-                        <label> Salary</label><br>
+                        <label> Min Salary</label><br>
                         <input type="text" placeholder="Min"><br> 
                      </div>
                      <div class="col-sm-6">
-                           <label></label><br>
+                           <label>Max salary</label><br>
                         <input type="text" placeholder="Max"><br> 
                      </div>
                   </div><br>
@@ -93,11 +119,12 @@
                      </div>
                      <div class="col-sm-6">
                         <label> Languages</label><br>
-                        <select>
-                           <option>Select Language</option>
-                           <option>Tamil</option>
-                           <option>English</option>
-                        </select>
+                        <ng-select class="NgSelect" 
+                           [items]="_Languages" 
+                           [searchable]="true" 
+                           formControlName="Languages"
+                           placeholder="Languages">
+                        </ng-select> 
                      </div>
                   </div><br>
                   <div class="row">
@@ -129,6 +156,7 @@
       </div>
    </div>
 </div>
+<!-- Footer -->
 <div class="footer">
    <div class="email_section">
       <div class="news">
@@ -141,10 +169,6 @@
       </div>
    </div>
    <div class="link_section">
-      <span class="company">
-         <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </span>
       <span class="about">
          <ul>
             <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>

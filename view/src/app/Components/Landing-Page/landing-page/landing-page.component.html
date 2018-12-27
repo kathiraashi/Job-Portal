@@ -1,7 +1,7 @@
 <app-header></app-header>
 <!-- Header Two -->
 <div class="header_two">
-   <span style="margin-left: 6%;font-size: 20px;font-weight: 600;">Jobby</span>
+   <span style="margin-left: 6%;font-size: 22px;font-weight: 600;">Jobby</span>
    <ul class="Menu1">
       <a [routerLink]="['/landing_page']"  [routerLinkActive]="'active'" ><li class="Menu_List1 ">Home</li></a>
       <a [routerLink]="['/Job_Search']" [routerLinkActive]="'active'" ><li class="Menu_List1 ">Find Jobs</li></a>
@@ -19,24 +19,27 @@
 <div class="header_three">
    <ul class="Menu2">
       <li class="Menu_List2"><input type="text" placeholder="keywords(eg.Job Title,Position...)" style="outline: none; background-color: #fff;border: 1px solid #fff;padding: 7px 10px;width: 290px;height: 40px; border-radius: 3px;margin-top: 7px;"></li>
-      <li class="Menu_List2"><input type="text" placeholder="Locatio(eg.City,Country...)"></li>
+      <li class="Menu_List2"><input type="text" placeholder="Location(eg.City,Country...)"></li>
       <li class="Menu_List2"><input type="text" placeholder="Industry(eg.Design,Art......)"></li>
-      <span class="Menu_List"><input type="text" placeholder="SEARCH NOW" style="outline:none;background-color: #ff4406;border: 2px solid #fff;padding: 0px 10px;width: 180px;height: 40px;border-radius: 3px;color: #fff;margin-top:7px;"></span>
+      <span class="Menu_List"><input type="text" placeholder="SEARCH NOW" style="outline:none;background-color: #ff4406;border: 2px solid #fff;padding: 0px 10px;width: 180px;height: 40px;border-radius: 3px;color: #fff;margin-top:7px; font-family: roboto, sans-serif;"></span>
    </ul>
-</div>
+</div><br>
+<!-- Image Section -->
 <div class="image_section">
    <img src="../../../../assets/Images/career.jpg">
-</div>
-<div class="header_four">
+</div><br><br>
+<!-- Header Four -->
+<!-- <div class="header_four">
    <ul class="Menu3">
       <li class="Menu_List3">3M Registered Members</li>
       <li class="Menu_List3">786k Job Found</li>
       <li class="Menu_List3">1.2k Best Companies</li>
-      <!-- <button mat-raised-button color="warn">Warn</button> -->
-      <span class="post"><a [routerLink]="['/Job_View']" ><button>POST A JOB</button></a></span>
+       <button mat-raised-button color="warn">Warn</button> -->
+      <!-- <span class="post"><a [routerLink]="['/Job_View']" ><button>POST A JOB</button></a></span>
       <span class="task"><button>POST A TASK</button></span>
    </ul>
-</div><br>
+</div><br> -->
+<!-- Content Section -->
 <div class="content_section">
    <div class="container">
       <p style="text-align: center;font-size: 22px;font-weight: 600;margin-bottom:0px;color:#000">What We Offer</p>
@@ -46,144 +49,58 @@
          <div class="col-sm-3 content">
             <h4>Searching the Best Job</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <h5>Read More  >></h5>
+           <a> <h5>Read More  >></h5></a>
          </div>
          <div class="col-sm-3 content">
             <h4>Searching the Best Job</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <h5>Read More  >></h5>
+            <a><h5>Read More  >></h5></a>
          </div>
          <div class="col-sm-3 content">
             <h4>Searching the Best Job</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <h5>Read More  >></h5>
+            <a><h5>Read More  >></h5></a>
          </div>
          <div class="col-sm-3 content">
             <h4>Searching the Best Job</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <h5>Read More  >></h5>
+            <a><h5>Read More  >></h5></a>
          </div>
       </div>
    </div>
 </div><br>
+<!-- Jon Section -->
 <div class="job_section">
    <div class="container">
-      <p style="text-align: center;font-size: 22px;font-weight: 600;margin-bottom:0px;">Find Latest Jobs</p>
-      <p style="text-align: center;font-size: 12px;font-weight: 600;color: #3c3939;">Your Job For a Future</p>
+      <p style="text-align: center;font-size: 22px;font-weight: 600;margin-bottom:0px; font-family: roboto,sans-serif;">Find Latest Jobs</p>
+      <p style="text-align: center;font-size: 12px;font-weight: 600;color: #3c3939; font-family: roboto,sans-serif;">Your Job For a Future</p>
       <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:47%"></div><br>
       <div class="row">
-         <div class="col-sm-4 job">
-                  <div class="header">
-                     <span class="img_section">
-                        <img src="../../../../assets/Images/employee.jpg">
-                     </span>
-                     <span class="name_section">
-                        <p class="name">John Doe </p>
-                        <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                     </span>
-                     <span class="price_section">
-                        <p class="Price">$599</p>
-                        <p><button class="button">Full Time</button></p>
-                     </span>
-                  </div><br>
-                  <div class="content_section">
-                     <h4>UX Designer</h4>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div><br>
-                  <div class="button_section">
-                     <!-- <button mat-raised-button color="primary">Primary</button>
-                     <button mat-raised-button color="primary">Primary</button>
-                     <button mat-raised-button color="primary">Primary</button>
-                     <button mat-raised-button color="primary">Primary</button> -->
-                     <button class="ux"><span>UX</span></button>
-                     <button class="ui"><span>UI</span></button>
-                     <button class="photoshop"><span>Photoshop</span></button>
-                     <button class="view"><span>+4</span></button>
-                  </div><br>
-                  <div class="job_footer">
-                     <div class="row" style="border-top: 1px solid #ddd;">
-                        <div class="col-sm-5 button">
-                           <p (click)="JobApply()">APPLY NOW</p>
-                           </div>
-                           <div class="col-sm-5 button">
-                              <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                           </div> 
-                           <div class="col-sm-2 ">
-                              <!-- <button mat-mini-fab>
-                                 <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-                              </button> -->
-                           </div>
-                        </div>
-                     </div>
-         </div>
-         <div class="col-sm-4 job">
-            <div class="header">
-                  <span class="img_section">
-                     <img src="../../../../assets/Images/employee.jpg">
-                  </span>
-                  <span class="name_section">
-                     <p class="name">John Doe </p>
-                     <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
-                  </span>
-                  <span class="price_section">
-                     <p class="Price">$599</p>
-                     <p><button class="button">Full Time</button></p>
-                  </span>
-            </div><br>
-            <div class="content_section">
-               <h4>UX Designer</h4>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div><br>
-            <div class="button_section">
-               <!-- <button mat-raised-button color="primary">Primary</button>
-               <button mat-raised-button color="primary">Primary</button>
-               <button mat-raised-button color="primary">Primary</button>
-               <button mat-raised-button color="primary">Primary</button> -->
-               <button class="ux"><span>UX</span></button>
-               <button class="ui"><span>UI</span></button>
-               <button class="photoshop"><span>Photoshop</span></button>
-               <button class="view"><span>+4</span></button>
-            </div><br>
-            <div class="job_footer">
-               <div class="row" style="border-top: 1px solid #ddd;">
-                  <div class="col-sm-5 button">
-                     <p (click)="JobApply()">APPLY NOW</p>
-                     </div>
-                     <div class="col-sm-5 button">
-                        <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
-                     </div> 
-                     <div class="col-sm-2 ">
-                     </div>
-                  </div>
-               </div>
-         </div>
-         <div class="col-sm-4 job">
+         <div class="col-sm-4 job" *ngFor="let item of results; let i=index" >
             <div class="header">
                <span class="img_section">
-                  <img src="../../../../assets/Images/employee.jpg">
+                  <img src="../../../../assets/Images/{{item.user_image}}">
                </span>
                <span class="name_section">
-                  <p class="name">John Doe </p>
-                  <p class="location"><span><i class="material-icons">location_on</i></span> New York</p>
+                  <p class="name"> {{item.name}} </p>
+                  <p class="location"><span><i class="material-icons">location_on</i></span> {{item.location}}</p>
                </span>
                <span class="price_section">
-                  <p class="Price">$599</p>
-                  <p><button class="button">Full Time</button></p>
+                  <p class="Price">{{item.price}}</p>
+                  <p><button class="button">{{item.job_Type}}</button></p>
                </span>
             </div><br>
             <div class="content_section">
-               <h4>UX Designer</h4>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+               <h4>{{item.designation}}</h4>
+               <p>{{item.description}}</p>
             </div><br>
             <div class="button_section">
                <!-- <button mat-raised-button color="primary">Primary</button>
                <button mat-raised-button color="primary">Primary</button>
                <button mat-raised-button color="primary">Primary</button>
                <button mat-raised-button color="primary">Primary</button> -->
-               <button class="ux"><span>UX</span></button>
-               <button class="ui"><span>UI</span></button>
-               <button class="photoshop"><span>Photoshop</span></button>
-               <button class="view"><span>+4</span></button>
+               <button class="ux" *ngFor="let skill of item.skills"><span> {{skill.skill}} </span></button>
+               <button class="view"><span>{{item.skills.length}}</span></button>
             </div><br>
             <div class="job_footer">
                <div class="row" style="border-top: 1px solid #ddd;">
@@ -191,9 +108,9 @@
                      <p (click)="JobApply()">APPLY NOW</p>
                   </div>
                   <div class="col-sm-5 button">
-                     <a [routerLink]="['/Job_View']"><P>VIEW JOB</P></a>
+                     <a [routerLink]="['/Job_View', item.job_id]"><P>VIEW JOB</P></a>
                   </div> 
-                  <div class="col-sm-2 ">
+                  <div class="col-sm-2">
                      <!-- <button mat-mini-fab>
                         <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
                      </button> -->
@@ -204,6 +121,7 @@
       </div>
    </div>
 </div><br><br>
+<!-- Footer -->
 <div class="footer">
    <div class="email_section">
       <div class="news">
@@ -216,10 +134,6 @@
       </div>
    </div>
    <div class="link_section">
-      <span class="company">
-         <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </span>
       <span class="about">
          <ul>
             <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>

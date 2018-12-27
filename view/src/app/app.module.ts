@@ -1,12 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
-import { MatButtonModule} from '@angular/material';
+import { MatButtonModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { ModalModule} from 'ngx-bootstrap';
 import {NgSelectModule } from '@ng-select/ng-select';
+import {InputSwitchModule} from 'primeng/inputswitch';
 
 import { AppRoutingModule } from './app.routing.module';
 import { LandingPageComponent } from './Components/Landing-Page/landing-page/landing-page.component';
@@ -25,8 +29,8 @@ import { CompanyListComponent } from './Components/Company-Profile/Company-List/
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LandingPageComponent,
+   AppComponent,
+   LandingPageComponent,
    HeaderComponent,
    JobApplyComponent,
    RegistrationComponent,
@@ -46,7 +50,14 @@ import { CompanyListComponent } from './Components/Company-Profile/Company-List/
       MatButtonModule,
       ModalModule.forRoot(),
       AppRoutingModule,
-      NgSelectModule
+      NgSelectModule,
+      FormsModule,
+      ReactiveFormsModule,
+      InputSwitchModule,
+      HttpModule,
+      HttpClientModule,
+      MatDatepickerModule,
+      MatNativeDateModule,
   ],
   providers: [],
   entryComponents: [ModelJobApplyComponent],

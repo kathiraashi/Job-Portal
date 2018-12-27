@@ -33,7 +33,7 @@
    border-radius: 0px;
 }
 .ng-select.NgSelect .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
-   background-color: #4ab65f;
+   background-color: #ff4500;
    color: #fff;
 }
 .ng-select.NgSelect .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
@@ -58,6 +58,9 @@
    font-size: 14px;
    font-weight: 400;
    color: #516570;
+}
+.ng-select.DisabledHide.ng-select-single .ng-dropdown-panel-items .ng-option.ng-option-disabled {
+   display: none;
 }
 
 

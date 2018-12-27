@@ -13,9 +13,9 @@
 .header_two .Menu_List1{
    margin-right: 35px;
    color: #464242;
-   font-size: 16px;
-   font-weight: 500;
-   font-family: serif;
+   font-size: 15px;
+   font-weight: 600;
+   font-family: roboto, sans-serif;
 }
 .header_two .search i{
    margin-top:5px;
@@ -23,36 +23,7 @@
    font-weight: 500;
    color: #FF4500;
 }
-.header_two .post{
-   margin-left: 30px;
-}
-.header_two .post button{
-   background-color: #FF4500;
-   border: 1px solid #ff4500;
-   padding: 5px 15px;
-   border-radius: 3px;
-   font-size: 11px;
-   font-weight: 700;
-   color: #fff;
-   outline: none;
-   cursor: pointer;
-   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-.header_two .task{
-   margin-left: 20px;
-}
-.header_two .task button{
-   background-color: #39383D;
-   border: 1px solid #39383D;
-   padding: 5px 15px;
-   border-radius: 3px;
-   font-size: 11px;
-   font-weight: 700;
-   color: #fff;
-   outline: none;
-   cursor: pointer;
-   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-}
+/* Header Three */
 .header_three{
    width:100%;
    height:50px;
@@ -88,31 +59,35 @@
    margin-top: 16px;
    cursor: pointer;
 }
+/* Filters */
 .Filters .filters{
    border: 1px solid #d6caca;
-   height: 894px;
+   height: 1004px;
+   box-shadow: 0px 4px 6px 0px #cecccc;
 }
 .Filters .filters .header{
    border-bottom: 1px solid #ded9d9;
    margin-bottom: 30px;
    padding-bottom: 10px;
-   width: 109%;
+   width: 113%;
    margin-left: -17px;
-   padding-left: 19px;
+   padding-left: 19px
 }
 .Filters .filters .header p{
    font-size: 15px;
    font-weight: 600;
    color: #212020;
    margin-top: 13px;
-   padding:0px 20px;
+   padding: 0px 4px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .header p span{
    font-size: 15px;
    font-weight: 500;
    color: #c1b8b8;
-   float: right;
-   padding:0px 20px;
+   padding: 0px 15px;
+   margin-left: 92px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .skills p{
    font-size: 15px;
@@ -120,6 +95,7 @@
    color: #212020;
    margin-top: 13px;
    padding:0px 5px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .skills p span{
    font-size: 15px;
@@ -127,6 +103,7 @@
    color: #c1b8b8;
    float: right;
    padding:0px 25px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .skills input{
    width: 100%;
@@ -134,19 +111,22 @@
    border: 1px solid #ececec;
    border-radius: 3px;
    outline: none;
-   padding: 7px 5px;
+   margin-bottom: 10px;
+   padding: 5px 5px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #6d6666;
 }
 .Filters .filters .skills input::placeholder{
    font-size:13px;
    font-weight:500;
    color:#beb9b9;
-   padding: 10px 10px;
 }
 .Filters .filters .skills .buttons{
    border-bottom: 1px solid #ded9d9;
    margin-bottom: 30px;
-   padding-bottom: 10px;
-   width: 109%;
+   padding-bottom: 30px;
+   width: 113%;
    margin-left: -17px;
    padding-left: 19px;
 }
@@ -223,7 +203,7 @@
    border-bottom: 1px solid #ded9d9;
    margin-bottom: 30px;
    padding-bottom: 10px;
-   width: 109%;
+   width: 113%;
    margin-left: -17px;
    padding-left: 19px;
 }
@@ -233,6 +213,7 @@
    color: #212020;
    margin-top: 13px;
    padding:0px 5px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Job_Type p span{
    font-size: 15px;
@@ -240,9 +221,10 @@
    color: #c1b8b8;
    float: right;
    padding:0px 25px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Job_Type select{
-   width: 100%;
+   width: 89%;
    height: 39px;
    border: 1px solid #ececec;
    border-radius: 3px;
@@ -253,7 +235,7 @@
    border-bottom: 1px solid #ded9d9;
    margin-bottom: 30px;
    padding-bottom: 10px;
-   width: 109%;
+   width: 113%;
    margin-left: -17px;
    padding: 10px 30px
 }
@@ -263,6 +245,7 @@
    color: #212020;
    margin-top: 13px;
    padding:0px 5px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Experience_Level p span{
    font-size: 15px;
@@ -270,9 +253,9 @@
    color: #c1b8b8;
    float: right;
    padding:0px 25px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Experience_Level select{
-   width: 100%;
    height: 39px;
    border: 1px solid #ececec;
    border-radius: 3px;
@@ -283,9 +266,9 @@
    border-bottom: 1px solid #ded9d9;
    margin-bottom: 30px;
    padding-bottom: 10px;
-   width: 109%;
+   width: 113%;
    margin-left: -17px;
-   padding: 10px 30px
+   padding: 10px 30px;
 }
 .Filters .filters .Location p{
    font-size: 15px;
@@ -293,6 +276,7 @@
    color: #212020;
    margin-top: 13px;
    padding:0px 5px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Location p span{
    font-size: 15px;
@@ -300,6 +284,7 @@
    color: #c1b8b8;
    float: right;
    padding:0px 25px;
+   font-family: roboto,sans-serif;
 }
 .Filters .filters .Location input{
    width: 100%;
@@ -307,13 +292,16 @@
    border: 1px solid #ececec;
    border-radius: 3px;
    outline: none;
-   padding: 7px 5px;
+   margin-bottom: 10px;
+   padding: 5px 5px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #6d6666;
 }
 .Filters .filters .Location input::placeholder{
    font-size:13px;
    font-weight:500;
    color:#beb9b9;
-   padding: 10px 10px;
 }
 .Search_Now .search_now{
    background-color: #FF4500;
@@ -325,15 +313,17 @@
    color: #fff;
    outline: none;
    margin-left: -16px;
-   width: 109%;
+   width: 113%;
+   font-family: roboto,sans-serif;
 }
 
-
+/* Main Header */
 .Jobs .Main_Header {
    border: 1px solid #ff4500;
    background-color: #ff4500;
    width: 100%;
    display: inline-flex;
+   margin-left: 15px;
 }
 .Jobs .Main_Header .image_section{
    width: 20%;
@@ -350,10 +340,12 @@
    color: #fff;
    margin-bottom: 3px;
    margin-top: 13px;
+   font-family: roboto,sans-serif;
 }
 .Jobs .Main_Header .content_section .unlimited_jobs{
    font-size: 14px;
    color: #fff;
+   font-family: roboto,sans-serif;
 }
 .Jobs .Main_Header .button_section{
    width:20%;
@@ -368,6 +360,7 @@
    color: #fff;
    outline: none;
    margin-top: 20px;
+   font-family: roboto,sans-serif;
 
 }
 /* Tabs */
@@ -384,6 +377,7 @@
    font-size: 13px;
    font-weight: 600;
    letter-spacing: 0.4px;
+   font-family: roboto,sans-serif;
 }
 .Tabs .Tab:hover{
    background-color:  #ff4500;
@@ -411,24 +405,49 @@
    padding: 5px 5px;
    color: #696666;
    margin-top:8px;
+   cursor:pointer;
+   margin-left: 100px;
 }
-.Tabs li .menu{
+.Tabs li.active .grid{
+   background-color: #ff4500;
+   color:#fff;
+   border:1px solid #ff4500;
+}
+/* .Tabs li .grid:hover{
+   background-color: #ff4500;
+   color:#fff;
+   border:1px solid #ff4500;
+} */
+.Tabs li .list{
    font-size: 15px;
    font-weight: 500;
-   border: 1px solid #ff4500;
-   background-color: #ff4500;
+   border: 1px solid #b5aeae;
    border-radius: 50%;
    padding: 5px 5px;
-   color: #fff;
+   color: #696666;
    margin-top:8px;
+   cursor:pointer;
 }
-
+.Tabs li.active .list{
+   background-color: #ff4500;
+   color:#fff;
+   border:1px solid #ff4500;
+}
+.relevance_section {
+   display: inline-flex;
+   width: 100%;
+}
+.relevance_section .relevance{
+   width: 65%;
+   margin-top: -7px;
+}
+/* Job */
 .job{
    border: 1px solid #d0cbcb;
    width: 100%;
-   height: 275px;
    flex: 0 0 95%;
-   margin-left: 20px;
+   margin-left: 30px;
+   margin-bottom: 25px;
 }
 .job:hover{
    box-shadow: 0px 4px 6px 0px rgba(0, 11, 40, 0.1);
@@ -437,6 +456,7 @@
 .header{
    width: 100%;
    display: inline-flex;
+   margin-top: 10px
 }
 .img_section{
    width: 10%;
@@ -488,15 +508,21 @@
    outline: none;
    margin-bottom: 3px;
    margin-left: 53px;
+   font-family: roboto, sans-serif;
 }
 .content_section h4{
-   font-size: 18px;
+   font-size: 15px;
    font-weight: 600;
+   font-family: roboto, sans-serif;
 }
 .content_section p{
    font-size: 15px;
    font-weight: 500;
    color: #c3bebe;
+   font-family: roboto, sans-serif;
+}
+.button_section{
+   width:100;
 }
 .ux{
    margin-right: 10px;
@@ -510,29 +536,8 @@
    font-weight: 500;
    color: #8a8585;
 }
-.ui{
-   margin-right: 10px;
-   outline: none;
-   padding: 3px 18px;
-   border-radius: 15px;
-   border: none;
-}
-.ui span{
-   font-size: 13px;
-   font-weight: 500;
-   color: #8a8585;
-}
-.photoshop{
-   margin-right: 10px;
-   outline: none;
-   padding: 3px 18px;
-   border-radius: 15px;
-   border: none;
-}
-.photoshop span{
-   font-size: 13px;
-   font-weight: 500;
-   color: #8a8585;
+.ux:hover{
+   box-shadow: 2px 2px 4px #ababab;
 }
 .job_footer{
    width: 100%;
@@ -544,11 +549,122 @@
    padding: 17px 15px;
    margin-bottom: 6px;
 }
+
+/* Job */
+.Job{
+   border: 1px solid #d0cbcb;
+   width: 100%;
+   flex: 0 0 45%;
+   margin-left: 30px;
+   margin-bottom: 25px;
+}
+.Job:hover{
+   box-shadow: 0px 4px 6px 0px rgba(0, 11, 40, 0.1);
+   cursor:pointer;
+}
+.Header{
+   width: 100%;
+   display: inline-flex;
+   margin-top: 10px
+}
+.Img_Section{
+   width: 14%;
+}
+.Img_Section img{
+   width: 50px;
+   height: 50px;
+   padding: 5px 5px;
+   border-radius: 50%;
+}
+.Name_Section{
+   width: 50%;
+}
+.Name_Section .Name{
+   font-size: 17px;
+   font-weight: 500;
+   color: #2b2929;
+   margin-top: 3px;
+   margin-bottom: 2px;
+}
+.Name_Section .Location{
+   font-size: 14px;
+   font-weight: 500;
+   color: #a59999;
+}
+.Name_Section .Location i{
+   font-size: 15px;
+   font-weight: 500;
+}
+.Price_Section{
+   width: 35%;
+}
+.Price_Section .Price{
+   font-size: 17px;
+   font-weight: 500;
+   color: #2b2929;
+   margin-top: 3px;
+   margin-bottom: 2px;
+   margin-left: 63px;
+}
+.Price_Section .button  {
+   background-color: #FF4500;
+   border: 1px solid #ff4500;
+   padding: 2px 11px;
+   border-radius: 40px;
+   font-size: 11px;
+   font-weight: 700;
+   color: #fff;
+   outline: none;
+   margin-bottom: 3px;
+   margin-left: 50px;
+   font-family: roboto, sans-serif;
+}
+.Content_Section h4{
+   font-size: 15px;
+   font-weight: 600;
+   font-family: roboto, sans-serif;
+}
+.Content_Section p{
+   font-size: 15px;
+   font-weight: 500;
+   color: #c3bebe;
+   font-family: roboto, sans-serif;
+}
+.Button_Section{
+   width:100%;
+}
+.ux{
+   margin-right: 10px;
+   outline: none;
+   padding: 3px 18px;
+   border-radius: 15px;
+   border: none;
+   margin-bottom: 8px;
+}
+.ux span{
+   font-size: 13px;
+   font-weight: 500;
+   color: #8a8585;
+}
+.ux:hover{
+   box-shadow: 2px 2px 4px #ababab;
+}
+.Job_Footer{
+   width: 100%;
+}
+.Job_Footer .button p{
+   font-size: 14px;
+   font-weight: 500;
+   border-right: 1px solid #ddd;
+   padding: 17px 15px;
+   margin-bottom: 6px;
+}
+/* Footer */
 .footer{
    width: 100%;
    height: 400px;
    border: 1px solid #242424;
-   background-color: #242424
+   background-color: #242424;
 }
 .email_section{
    display: inline-flex;
@@ -566,11 +682,13 @@
    font-weight: 500;
    margin-top: 25px;
    margin-bottom: 0px;
+   font-family: roboto, sans-serif;
 }
 .news .news_content{
    color: #9c9898;
    font-size: 16px;
    margin-bottom: 0px;
+   font-family: roboto, sans-serif;
 }
 .email{
    width: 50%;
@@ -583,17 +701,23 @@
    border-radius: 2px;
    border: 1px solid #fff;
    padding: 5px 20px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #6d6666;
+   font-family: roboto, sans-serif;
 }
 .email button{
    height: 35px;
    background-color: #ff430b;
    border: 1px solid #ff430b;
-   padding: 8px 10px;
+   padding: 5px 10px;
    border-radius: 3px;
    color: #fff;
    font-size: 13px;
    font-weight: 500;
-   margin-left: -81px
+   margin-left: -81px;
+   font-family: roboto, sans-serif;
+   outline:none;
 }
 .link_section{
    width: 100%;
@@ -601,15 +725,9 @@
    border-bottom: 1px solid #403f3f;
    padding: 15px;
 }
-.company p{
-   width: 25%;
-   color: #9c9898;
-   font-size: 13px;
-   font-weight: 500;
-   margin-left: 120px;
-}
 .about{
-   width: 25%;
+   width: 30%;
+   margin-left: 125px;
 }
 .about ul{
    margin-top: 60px;
@@ -624,7 +742,7 @@
    margin-left: 10px;
 }
 .for_companies{
-   width: 25%;
+   width: 30%;
 }
 .for_companies ul{
    margin-top: 60px;
@@ -639,7 +757,7 @@
    margin-left: 10px;
 }
 .for_candidates{
-   width: 25%;
+   width: 30%;
 }
 .for_candidates ul{
    margin-top: 60px;
@@ -665,7 +783,7 @@
    margin-top: 20px;
    margin-left: 75px;
    font-size: 13px;
-   font-weight: 500
+   font-weight: 500;
 }
 .links{
    width:50%;
@@ -680,6 +798,7 @@
    color: #9c9898;
    font-size: 13px;
    margin-right: 30px;
+   font-family: roboto, sans-serif;
 }
 a{
    text-decoration: none;

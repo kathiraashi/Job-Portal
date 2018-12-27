@@ -6,7 +6,7 @@
       <a [routerLink]="['/landing_page']" ><li class="Menu_List1 ">Home</li></a>
       <a [routerLink]="['/Job_Search']"><li class="Menu_List1">Find Jobs</li></a>
       <!-- <li class="Menu_List1">Find Work</li> -->
-      <a [routerLink]="['/Company_Profile']"><li class="Menu_List1 ">Find Companies</li></a>
+      <a [routerLink]="['/Company_List']"><li class="Menu_List1 " [routerLinkActive]="'active'" >Find Companies</li></a>
       <!-- <li class="Menu_List1">Find FreeLancers</li>
       <li class="Menu_List1">pages</li> -->
       <span class="search"><i class="material-icons">search</i></span>
@@ -15,6 +15,7 @@
       <a [routerLink]="['/Employer_Registration']"><span class="task"><button>EMPLOYER</button></span></a>
    </ul>
 </div>
+<!-- header three -->
 <div class="header_three">
    <div class="left_content">
       <p>Create Profile</p>
@@ -28,40 +29,62 @@
       <div class="row">
          <div class="col-sm-8 Profile_details">
             <h4>Create Profile</h4>
-            <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:3%"></div><br><br>
+            <div style="border-bottom: 3px solid #ff4500;width:50px;text-align:center;margin-left:3%"></div><br>
             <!-- <p>Profile</p>
             <img src="../../../../assets/Images/profile.png"><br><br>
             <div>
                <button class="upload_button">Upload Profile</button>
             </div><br> -->
             <div class="form_details">
-               <form>
-                  <label>Name</label><br>
-                  <input type="text" placeholder="Your Name"><br>
+               <form [formGroup]="Form">
                   <div class="row">
-                     <div class="col-sm-6">
+                     <div class="col-sm-12" [ngClass]="{'Form_Err': !Form.controls['Name'].pristine && Form.controls['Name'].errors, 'Form_Success': Form.controls['Name'].valid && !Form.controls['Name'].pristine }">
+                        <label>Name</label><br>
+                        <input type="text" formControlName="Name" placeholder="Your Name"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Name'].errors && !Form.controls['Name'].pristine">
+                           <span *ngIf="Form.controls['Name'].errors.required">Name is required</span>
+                        </p>  
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Email'].pristine && Form.controls['Email'].errors, 'Form_Success': Form.controls['Email'].valid && !Form.controls['Email'].pristine }">
                         <label>Email</label><br>
-                        <input type="text" placeholder="Enter Your Email Address">
+                        <input type="text" formControlName="Email" placeholder="Enter Your Email Address">
+                        <p class="error" style="color: rgb(221, 10, 10);;margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Email'].errors && !Form.controls['Email'].pristine">
+                           <span *ngIf="Form.controls['Email'].errors.required">Email is required</span>
+                        </p>  
                      </div>
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Location'].pristine && Form.controls['Location'].errors, 'Form_Success': Form.controls['Location'].valid && !Form.controls['Location'].pristine }">
                         <label>Location</label><br>
-                        <input type="text" placeholder="Enter Your Location"><br>
+                        <input type="text" formControlName="Location" placeholder="Enter Your Location"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);;margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Location'].errors && !Form.controls['Location'].pristine">
+                           <span *ngIf="Form.controls['Location'].errors.required">Location is required</span>
+                        </p>  
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Phone_No'].pristine && Form.controls['Phone_No'].errors, 'Form_Success': Form.controls['Phone_No'].valid && !Form.controls['Phone_No'].pristine }">
                         <label>Phone No</label><br>
-                        <input type="text" placeholder="Enter Your Number"><br>
+                        <input type="text" formControlName="Phone_No" placeholder="Enter Your Number"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);;margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Phone_No'].errors && !Form.controls['Phone_No'].pristine">
+                           <span *ngIf="Form.controls['Phone_No'].errors.required">Phone No is required</span>
+                        </p>  
                      </div>
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Password'].pristine && Form.controls['Password'].errors, 'Form_Success': Form.controls['Password'].valid && !Form.controls['Password'].pristine }">
                         <label>Password</label><br>
-                        <input type="password" placeholder="Enter Your Password"><br>
+                        <input type="password" formControlName="Password" placeholder="Enter Your Password"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);;margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Password'].errors && !Form.controls['Password'].pristine">
+                           <span *ngIf="Form.controls['Password'].errors.required">Password is required</span>
+                        </p>  
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-sm-6">
+                     <div class="col-sm-6" [ngClass]="{'Form_Err': !Form.controls['Confirm_Password'].pristine && Form.controls['Confirm_Password'].errors, 'Form_Success': Form.controls['Confirm_Password'].valid && !Form.controls['Confirm_Password'].pristine }">
                         <label> Confirm Password</label><br>
-                        <input type="password" placeholder="Confirm Your Password"><br>
+                        <input type="password" formControlName="Confirm_Password" placeholder="Confirm Your Password"><br>
+                        <p class="error" style="color: rgb(221, 10, 10);;margin-left:15px;margin-bottom: 20px" *ngIf="Form.controls['Confirm_Password'].errors && !Form.controls['Confirm_Password'].pristine">
+                           <span *ngIf="Form.controls['Confirm_Password'].errors.required">Confirm Password is required</span>
+                        </p>  
                      </div>
                   </div>
                </form>
@@ -80,6 +103,7 @@
       </div>
    </div>
 </div>
+<!-- Footer -->
 <div class="footer">
    <div class="email_section">
       <div class="news">
@@ -92,10 +116,6 @@
       </div>
    </div>
    <div class="link_section">
-      <span class="company">
-         <h2 style="color:#fff;font-size:16px;font-weight:500;margin-left: 120px; margin-top: 60px;">Jobby</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </span>
       <span class="about">
          <ul>
             <li style="color:#fff;font-size:16px;font-weight:500;">About Us</li><br>

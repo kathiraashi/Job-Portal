@@ -1,0 +1,35 @@
+[ {
+      "Job_Id" : 1,
+      "User_Image" : "employee.jpg",
+      "Name" : "kalpana",
+      "Location" : "coimbatore",
+      "Price" : "$566",
+      "Job_Type" : "Full Time",
+      "Designation" : "UX Designer",
+      "Description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Skills": [{ "Skill" : "UX" }, { "Skill" : "UI" }, {"Skill" : "Photoshop"}, { "Skill" : "CorelDraw" }]
+    },
+   {
+      "Job_Id" : 2,
+      "User_Image" : "employee.jpg",
+      "Name" : "kani",
+      "Location" : "chennai",
+      "Price" : "$900",
+      "Job_Type" : "Part Time",
+      "Designation" : "Front End Developer",
+      "Description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Skills": [{ "Skill" : "UX" }, { "Skill" : "UI" }, {"Skill" : "Photoshop"}, { "Skill" : "CorelDraw" }, { "Skill" : "Java" }, { "Skill" : "C++" }]
+   },
+   {
+      "Job_Id" : 3,
+      "User_Image" : "company.png",
+      "Name" : "Lavu",
+      "Location" : "bangalore",
+      "Price" : "$800",
+      "Job_Type" : "Full Time",
+      "Designation" : "Back End Developer",
+      "Description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Skills": [{ "Skill" : "UX" }, { "Skill" : "UI" }, {"Skill" : "Photoshop"}, { "Skill" : "CorelDraw" }, { "Skill" : "Java" }]
+   }
+
+   ]

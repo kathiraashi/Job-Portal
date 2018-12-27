@@ -13,9 +13,9 @@
 .header_two .Menu_List1{
    margin-right: 35px;
    color: #464242;
-   font-size: 16px;
-   font-weight: 500;
-   font-family: serif;
+   font-size: 15px;
+   font-weight: 600;
+   font-family: roboto, sans-serif;
 }
 .header_two .search i{
    margin-top:5px;
@@ -23,36 +23,7 @@
    font-weight: 500;
    color: #FF4500;
 }
-.header_two .post{
-   margin-left: 30px;
-}
-.header_two .post button{
-   background-color: #FF4500;
-   border: 1px solid #ff4500;
-   padding: 5px 15px;
-   border-radius: 3px;
-   font-size: 11px;
-   font-weight: 700;
-   color: #fff;
-   outline: none;
-   cursor: pointer;
-   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-.header_two .task{
-   margin-left: 20px;
-}
-.header_two .task button{
-   background-color: #39383D;
-   border: 1px solid #39383D;
-   padding: 5px 15px;
-   border-radius: 3px;
-   font-size: 11px;
-   font-weight: 700;
-   color: #fff;
-   outline: none;
-   cursor: pointer;
-   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-}
+/* Header Three */
 .header_three{
    width:100%;
    height:50px;
@@ -88,15 +59,17 @@
    margin-top: 16px;
    cursor: pointer;
 }
+/* Filters */
 .Filters .filters{
    border: 1px solid #d6caca;
-   height: 721px;
+   height: 796px;
+   box-shadow: 0px 4px 6px 0px #cecccc;
 }
 .Filters .filters .header{
    border-bottom: 1px solid #ded9d9;
    margin-bottom: 30px;
    padding-bottom: 10px;
-   width: 109%;
+   width: 113%;
    margin-left: -17px;
    padding-left: 19px
 }
@@ -106,13 +79,15 @@
    color: #212020;
    margin-top: 13px;
    padding: 0px 4px;
+   font-family: roboto, sans-serif;
 }
 .Filters .filters .header p span{
    font-size: 15px;
    font-weight: 500;
    color: #c1b8b8;
-   padding: 0px 89px;
-   margin-left: 92px
+   padding: 0px 15px;
+   margin-left: 92px;
+   font-family: roboto, sans-serif;
 }
 .Filters .filters .skills p{
    font-size: 15px;
@@ -120,6 +95,7 @@
    color: #212020;
    margin-top: 13px;
    padding:0px 5px;
+   font-family: roboto, sans-serif;
 }
 .Filters .filters .skills p span{
    font-size: 15px;
@@ -127,6 +103,7 @@
    color: #c1b8b8;
    float: right;
    padding:0px 25px;
+   font-family: roboto, sans-serif;
 }
 .Filters .filters .skills input{
    width: 100%;
@@ -134,19 +111,22 @@
    border: 1px solid #ececec;
    border-radius: 3px;
    outline: none;
-   padding: 7px 5px;
+   margin-bottom: 10px;
+   padding: 5px 5px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #6d6666;
 }
 .Filters .filters .skills input::placeholder{
    font-size:13px;
    font-weight:500;
    color:#beb9b9;
-   padding: 10px 10px;
 }
 .Filters .filters .skills .buttons{
    border-bottom: 1px solid #ded9d9;
    margin-bottom: 30px;
    padding-bottom: 10px;
-   width: 109%;
+   width: 113%;
    margin-left: -17px;
    padding-left: 19px;
 }
@@ -163,6 +143,9 @@
    font-weight: 500;
    color: #8a8585;
 }
+.Filters .filters .skills .ux:hover{
+   box-shadow: 2px 2px 4px #ababab;
+}
 .Filters .filters .skills .ui{
    margin-right: 10px;
    outline: none;
@@ -176,6 +159,9 @@
    font-weight: 500;
    color: #8a8585;
 }
+.Filters .filters .skills .ui:hover{
+   box-shadow: 2px 2px 4px #ababab;
+}
 .Filters .filters .skills .photoshop{
    margin-right: 10px;
    outline: none;
@@ -183,6 +169,9 @@
    border-radius: 15px;
    border: 1px solid #d0cbcb;
    background-color: #e8e6e6;
+}
+.Filters .filters .skills .photoshop:hover{
+   box-shadow: 2px 2px 4px #ababab;
 }
 .Filters .filters .skills span{
    font-size: 13px;
@@ -195,6 +184,7 @@
    color: #212020;
    margin-top: 13px;
    padding:0px 5px;
+   font-family: roboto, sans-serif;
 }
 .Filters .filters .Category p span{
    font-size: 15px;
@@ -202,6 +192,7 @@
    color: #c1b8b8;
    float: right;
    padding:0px 25px;
+   font-family: roboto, sans-serif;
 }
 .Filters .filters .Category select{
    width: 100%;
@@ -215,7 +206,7 @@
    border-bottom: 1px solid #ded9d9;
    margin-bottom: 30px;
    padding-bottom: 10px;
-   width: 109%;
+   width: 113%;
    margin-left: -17px;
    padding: 10px 30px
 }
@@ -225,6 +216,7 @@
    color: #212020;
    margin-top: 13px;
    padding:0px 5px;
+   font-family: roboto, sans-serif;
 }
 .Filters .filters .Series p span{
    font-size: 15px;
@@ -232,6 +224,7 @@
    color: #c1b8b8;
    float: right;
    padding:0px 25px;
+   font-family: roboto, sans-serif;
 }
 .Filters .filters .Series select{
    width: 100%;
@@ -245,7 +238,7 @@
    border-bottom: 1px solid #ded9d9;
    margin-bottom: 30px;
    padding-bottom: 10px;
-   width: 109%;
+   width: 113%;
    margin-left: -17px;
    padding: 10px 30px
 }
@@ -255,6 +248,7 @@
    color: #212020;
    margin-top: 13px;
    padding:0px 5px;
+   font-family: roboto, sans-serif;
 }
 .Filters .filters .Location p span{
    font-size: 15px;
@@ -262,6 +256,7 @@
    color: #c1b8b8;
    float: right;
    padding:0px 25px;
+   font-family: roboto, sans-serif;
 }
 .Filters .filters .Location input{
    width: 100%;
@@ -269,13 +264,16 @@
    border: 1px solid #ececec;
    border-radius: 3px;
    outline: none;
-   padding: 7px 5px;
+   margin-bottom: 10px;
+   padding: 5px 5px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #6d6666;
 }
 .Filters .filters .Location input::placeholder{
    font-size:13px;
    font-weight:500;
    color:#beb9b9;
-   padding: 10px 10px;
 }
 .Search_Now .search_now{
    background-color: #FF4500;
@@ -287,15 +285,17 @@
    color: #fff;
    outline: none;
    margin-left: -16px;
-   width: 109%;
+   width: 113%;
+   font-family: roboto, sans-serif;
 }
 
-
+/* Jobs */
 .Jobs .Main_Header {
    border: 1px solid #ff4500;
    background-color: #ff4500;
    width: 100%;
    display: inline-flex;
+   margin-left:25px;
 }
 .Jobs .Main_Header .image_section{
    width: 20%;
@@ -353,23 +353,44 @@
    padding: 5px 5px;
    color: #696666;
    margin-top:8px;
+   cursor:pointer;
+   margin-left: 100px;
 }
-.Tabs li .menu{
-   font-size: 15px;
-   font-weight: 500;
+.Tabs li.active .grid{
    border: 1px solid #ff4500;
    background-color: #ff4500;
+   color: #fff;
+}
+.Tabs li .list{
+   font-size: 15px;
+   font-weight: 500;
+   border: 1px solid #b5aeae;
    border-radius: 50%;
    padding: 5px 5px;
-   color: #fff;
+   color: #696666;
    margin-top:8px;
+   cursor:pointer;
 }
+.Tabs li.active .list{
+   border: 1px solid #ff4500;
+   background-color: #ff4500;
+   color: #fff;
+}
+.relevance_section {
+   display: inline-flex;
+   width: 100%;
+}
+.relevance_section .relevance{
+   width: 65%;
+   margin-top: -7px;
+}
+/* Company */
 .Company{
    border: 1px solid #e4dddd;
    padding: 25px 40px;
    width: 100%;
-   height: 214px;
-   margin-left: 15px;
+   margin-left: 30px;
+   margin-bottom: 25px;
 }
 .Company_Section{
    display: inline-flex;
@@ -393,6 +414,7 @@
    font-size: 16px;
    font-weight: 600;
    color: #424242;
+   font-family: roboto,sans-serif;
 }
 .Company_Section .Name_Section .Website{
    font-size: 13px;
@@ -408,6 +430,7 @@
    font-size: 16px;
    font-weight: 600;
    color: #424242;
+   font-family: roboto,sans-serif;
 }
 .Company_Section .Rating_Section .star{
    color:#79d368;
@@ -421,6 +444,7 @@
    font-size: 16px;
    font-weight: 600;
    color: #424242;
+   font-family: roboto,sans-serif;
 }
 .Company_Section .location_section .loca{
    font-size: 16px;
@@ -428,7 +452,7 @@
    color: #ff4500;
 }
 .job_footer{
-   width: 108%;
+   width: 107%;
    margin-left: -27px
 }
 .job_footer .button p{
@@ -436,13 +460,130 @@
    font-weight: 500;
    border-right: 1px solid #ddd;
    padding: 13px 106px;
-   margin-bottom: 6px;
+   margin-bottom: -25px;
 }
+
+
+/* Company */
+.Company_List{
+   margin-bottom: 25px;
+}
+.company{
+   border: 1px solid #e4dddd;
+   padding: 25px 40px;
+}
+.company:hover{
+   box-shadow: 0px 4px 6px 0px rgba(0, 11, 40, 0.1);
+   cursor:pointer;
+}
+.company_section .image_section img{
+   width: 140px;
+   height: 140px;
+   margin-left: 70px;
+}
+.company_section .name_section .name{
+   margin-bottom: 0px;
+   margin-top: 10px;
+   font-size: 17px;
+   font-weight: 600;
+   color: #424242;
+   font-family: roboto,sans-serif;
+   margin-left: 75px;
+}
+.company_section .name_section .website{
+   font-size: 14px;
+   font-weight: 500;
+   color: #ff4500;
+   margin-left: 60px;
+}
+ .About_Section h6{
+   margin-bottom: 3px;
+   font-size: 16px;
+   font-weight: 600;
+   color: #424242;
+   font-family: roboto,sans-serif;
+}
+ .About_Section p{
+   margin-bottom: 15px;
+   font-size: 15px;
+   font-weight: 500;
+   color: #8a8585;
+   font-family: roboto,sans-serif;
+}
+.Button_Section{
+   width:100%;
+}
+.ux{
+   margin-right: 10px;
+   outline: none;
+   padding: 3px 18px;
+   border-radius: 15px;
+   border: none;
+   margin-bottom: 8px;
+}
+.ux span{
+   font-size: 13px;
+   font-weight: 500;
+   color: #8a8585;
+}
+.ux:hover{
+   box-shadow: 2px 2px 4px #ababab;
+}
+.footer_section{
+   display: inline-flex;
+   width: 100%;
+}
+.footer_section .rating_section{
+   width:50%;
+}
+.company_section .footer_section .rating_section .Rating{
+   margin-bottom: 3px;
+   font-size: 16px;
+   font-weight: 600;
+   color: #424242;
+   font-family: roboto,sans-serif;
+   margin-left: -15px;
+}
+.company_section .footer_section .rating_section .Rating span{
+   margin-left: -20px;
+}
+.company_section .footer_section .rating_section .Star{
+   color:#79d368;
+}
+.footer_section .Location_Section{
+   width:50%;
+}
+.company_section .footer_section .Location_Section .Location{
+   margin-bottom: 3px;
+   font-size: 16px;
+   font-weight: 600;
+   color: #424242;
+   font-family: roboto,sans-serif;
+   float: right;
+}
+.company_section .Location_Section .Loc{
+   font-size: 16px;
+   font-weight: 500;
+   color: #ff4500;
+}
+.Job_Footer{
+   width: 116%;
+    margin-left: -25px;
+}
+.Job_Footer .Button p{
+   font-size: 14px;
+   font-weight: 500;
+   border-right: 1px solid #ddd;
+   padding: 15px 55px;
+   margin-bottom: -27px;
+}
+
+/* Footer */
 .footer{
    width: 100%;
    height: 400px;
    border: 1px solid #242424;
-   background-color: #242424
+   background-color: #242424;
 }
 .email_section{
    display: inline-flex;
@@ -460,11 +601,13 @@
    font-weight: 500;
    margin-top: 25px;
    margin-bottom: 0px;
+   font-family: roboto, sans-serif;
 }
 .news .news_content{
    color: #9c9898;
    font-size: 16px;
    margin-bottom: 0px;
+   font-family: roboto, sans-serif;
 }
 .email{
    width: 50%;
@@ -477,17 +620,23 @@
    border-radius: 2px;
    border: 1px solid #fff;
    padding: 5px 20px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #6d6666;
+   font-family: roboto, sans-serif;
 }
 .email button{
    height: 35px;
    background-color: #ff430b;
    border: 1px solid #ff430b;
-   padding: 8px 10px;
+   padding: 5px 10px;
    border-radius: 3px;
    color: #fff;
    font-size: 13px;
    font-weight: 500;
-   margin-left: -81px
+   margin-left: -81px;
+   font-family: roboto, sans-serif;
+   outline:none;
 }
 .link_section{
    width: 100%;
@@ -495,15 +644,9 @@
    border-bottom: 1px solid #403f3f;
    padding: 15px;
 }
-.company p{
-   width: 25%;
-   color: #9c9898;
-   font-size: 13px;
-   font-weight: 500;
-   margin-left: 120px;
-}
 .about{
-   width: 25%;
+   width: 30%;
+   margin-left: 125px;
 }
 .about ul{
    margin-top: 60px;
@@ -518,7 +661,7 @@
    margin-left: 10px;
 }
 .for_companies{
-   width: 25%;
+   width: 30%;
 }
 .for_companies ul{
    margin-top: 60px;
@@ -533,7 +676,7 @@
    margin-left: 10px;
 }
 .for_candidates{
-   width: 25%;
+   width: 30%;
 }
 .for_candidates ul{
    margin-top: 60px;
@@ -559,7 +702,7 @@
    margin-top: 20px;
    margin-left: 75px;
    font-size: 13px;
-   font-weight: 500
+   font-weight: 500;
 }
 .links{
    width:50%;
@@ -574,6 +717,7 @@
    color: #9c9898;
    font-size: 13px;
    margin-right: 30px;
+   font-family: roboto, sans-serif;
 }
 a{
    text-decoration: none;
